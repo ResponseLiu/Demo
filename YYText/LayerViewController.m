@@ -21,9 +21,7 @@
     [self circle];
     [self load];
     [self load2];
-    
-    
-    // Do any additional setup after loading the view.
+
 }
 -(void)load{
 
