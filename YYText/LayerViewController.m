@@ -17,10 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.view.backgroundColor = [UIColor whiteColor];
-    //change cocoa
+ 
     [self circle];
     [self load];
     [self load2];
+    
 
 }
 -(void)load{
