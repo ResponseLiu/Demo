@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.view.backgroundColor = [UIColor whiteColor];
-    
+    //change
     [self circle];
     [self load];
     [self load2];
