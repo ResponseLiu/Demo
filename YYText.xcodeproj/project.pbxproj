@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08303F6D1EC320DAAE26D129 /* libPods-YYText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE546FD10C97213F96ADFBA /* libPods-YYText.a */; };
+		6348CC9F1F3C36DD007F04E2 /* images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6348CC9E1F3C36DD007F04E2 /* images.bundle */; };
+		6348CCA11F3C3885007F04E2 /* tabbar_compose_friend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6348CCA01F3C3885007F04E2 /* tabbar_compose_friend@2x.png */; };
+		6348CCA61F3C3FD4007F04E2 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCA51F3C3FD4007F04E2 /* AnimationView.m */; };
+		6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAA1F3C49C8007F04E2 /* ViewController1.m */; };
+		6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAD1F3C4A13007F04E2 /* MainViewController.m */; };
+		6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCB11F3C4D30007F04E2 /* LayerViewController.m */; };
 		636E573E1F3AA8000018825A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E573D1F3AA8000018825A /* main.m */; };
 		636E57411F3AA8000018825A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57401F3AA8000018825A /* AppDelegate.m */; };
 		636E57441F3AA8010018825A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57431F3AA8010018825A /* ViewController.m */; };
@@ -15,6 +22,8 @@
 		636E574C1F3AA8010018825A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636E574A1F3AA8010018825A /* LaunchScreen.storyboard */; };
 		636E57571F3AA8010018825A /* YYTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57561F3AA8010018825A /* YYTextTests.m */; };
 		636E57621F3AA8010018825A /* YYTextUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57611F3AA8010018825A /* YYTextUITests.m */; };
+		636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57701F3AB0AF0018825A /* YYTextManager.m */; };
+		636E57811F3AF6240018825A /* EmoticonQQ.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 636E57801F3AF6240018825A /* EmoticonQQ.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30A6791D1503951D0FDA45CA /* Pods-YYText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYText.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYText/Pods-YYText.release.xcconfig"; sourceTree = "<group>"; };
+		6348CC9E1F3C36DD007F04E2 /* images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = images.bundle; sourceTree = "<group>"; };
+		6348CCA01F3C3885007F04E2 /* tabbar_compose_friend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar_compose_friend@2x.png"; path = "images.bundle/tabbar_compose_friend@2x.png"; sourceTree = "<group>"; };
+		6348CCA41F3C3FD4007F04E2 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
+		6348CCA51F3C3FD4007F04E2 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		6348CCA91F3C49C8007F04E2 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		6348CCAA1F3C49C8007F04E2 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		6348CCAC1F3C4A13007F04E2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6348CCAD1F3C4A13007F04E2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6348CCB01F3C4D30007F04E2 /* LayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
+		6348CCB11F3C4D30007F04E2 /* LayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerViewController.m; sourceTree = "<group>"; };
 		636E57391F3AA8000018825A /* YYText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636E573D1F3AA8000018825A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		636E573F1F3AA8000018825A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +71,11 @@
 		636E575D1F3AA8010018825A /* YYTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		636E57611F3AA8010018825A /* YYTextUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTextUITests.m; sourceTree = "<group>"; };
 		636E57631F3AA8010018825A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636E576F1F3AB0AF0018825A /* YYTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTextManager.h; sourceTree = "<group>"; };
+		636E57701F3AB0AF0018825A /* YYTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTextManager.m; sourceTree = "<group>"; };
+		636E57801F3AF6240018825A /* EmoticonQQ.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmoticonQQ.bundle; sourceTree = "<group>"; };
+		973D63001DD7126D1F897000 /* Pods-YYText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYText/Pods-YYText.debug.xcconfig"; sourceTree = "<group>"; };
+		DDE546FD10C97213F96ADFBA /* libPods-YYText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08303F6D1EC320DAAE26D129 /* libPods-YYText.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +104,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20F36367B2E1FB00A14A086A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				973D63001DD7126D1F897000 /* Pods-YYText.debug.xcconfig */,
+				30A6791D1503951D0FDA45CA /* Pods-YYText.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6348CCA71F3C498D007F04E2 /* 图文混排 */ = {
+			isa = PBXGroup;
+			children = (
+				636E57421F3AA8000018825A /* ViewController.h */,
+				636E57431F3AA8010018825A /* ViewController.m */,
+				636E576F1F3AB0AF0018825A /* YYTextManager.h */,
+				636E57701F3AB0AF0018825A /* YYTextManager.m */,
+			);
+			name = "图文混排";
+			sourceTree = "<group>";
+		};
+		6348CCA81F3C499C007F04E2 /* 高仿微博动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6348CCA91F3C49C8007F04E2 /* ViewController1.h */,
+				6348CCAA1F3C49C8007F04E2 /* ViewController1.m */,
+				6348CCA41F3C3FD4007F04E2 /* AnimationView.h */,
+				6348CCA51F3C3FD4007F04E2 /* AnimationView.m */,
+			);
+			name = "高仿微博动画";
+			sourceTree = "<group>";
+		};
+		6348CCAF1F3C4D09007F04E2 /* Layer动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6348CCB01F3C4D30007F04E2 /* LayerViewController.h */,
+				6348CCB11F3C4D30007F04E2 /* LayerViewController.m */,
+			);
+			name = "Layer动画";
+			sourceTree = "<group>";
+		};
 		636E57301F3AA8000018825A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +151,8 @@
 				636E57551F3AA8010018825A /* YYTextTests */,
 				636E57601F3AA8010018825A /* YYTextUITests */,
 				636E573A1F3AA8000018825A /* Products */,
+				20F36367B2E1FB00A14A086A /* Pods */,
+				9193C93045BE3A1F35452835 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +169,16 @@
 		636E573B1F3AA8000018825A /* YYText */ = {
 			isa = PBXGroup;
 			children = (
+				6348CCA01F3C3885007F04E2 /* tabbar_compose_friend@2x.png */,
+				6348CC9E1F3C36DD007F04E2 /* images.bundle */,
+				636E57801F3AF6240018825A /* EmoticonQQ.bundle */,
 				636E573F1F3AA8000018825A /* AppDelegate.h */,
 				636E57401F3AA8000018825A /* AppDelegate.m */,
-				636E57421F3AA8000018825A /* ViewController.h */,
-				636E57431F3AA8010018825A /* ViewController.m */,
+				6348CCAC1F3C4A13007F04E2 /* MainViewController.h */,
+				6348CCAD1F3C4A13007F04E2 /* MainViewController.m */,
+				6348CCA71F3C498D007F04E2 /* 图文混排 */,
+				6348CCA81F3C499C007F04E2 /* 高仿微博动画 */,
+				6348CCAF1F3C4D09007F04E2 /* Layer动画 */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
 				636E57481F3AA8010018825A /* Assets.xcassets */,
 				636E574A1F3AA8010018825A /* LaunchScreen.storyboard */,
@@ -140,6 +214,14 @@
 			path = YYTextUITests;
 			sourceTree = "<group>";
 		};
+		9193C93045BE3A1F35452835 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDE546FD10C97213F96ADFBA /* libPods-YYText.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 636E57661F3AA8010018825A /* Build configuration list for PBXNativeTarget "YYText" */;
 			buildPhases = (
+				1A3544B06574975A68A013A1 /* [CP] Check Pods Manifest.lock */,
 				636E57351F3AA8000018825A /* Sources */,
 				636E57361F3AA8000018825A /* Frameworks */,
 				636E57371F3AA8000018825A /* Resources */,
+				99824EA8947FC9DDC5210493 /* [CP] Embed Pods Frameworks */,
+				89150D9FAFEA79F457EB3F6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,9 +331,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6348CC9F1F3C36DD007F04E2 /* images.bundle in Resources */,
 				636E574C1F3AA8010018825A /* LaunchScreen.storyboard in Resources */,
+				636E57811F3AF6240018825A /* EmoticonQQ.bundle in Resources */,
 				636E57491F3AA8010018825A /* Assets.xcassets in Resources */,
 				636E57471F3AA8010018825A /* Main.storyboard in Resources */,
+				6348CCA11F3C3885007F04E2 /* tabbar_compose_friend@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +356,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A3544B06574975A68A013A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89150D9FAFEA79F457EB3F6C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYText/Pods-YYText-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99824EA8947FC9DDC5210493 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYText/Pods-YYText-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		636E57351F3AA8000018825A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */,
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
+				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				636E57411F3AA8000018825A /* AppDelegate.m in Sources */,
+				6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */,
+				6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */,
 				636E573E1F3AA8000018825A /* main.m in Sources */,
+				6348CCA61F3C3FD4007F04E2 /* AnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +563,7 @@
 		};
 		636E57671F3AA8010018825A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973D63001DD7126D1F897000 /* Pods-YYText.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YYText/Info.plist;
@@ -433,6 +575,7 @@
 		};
 		636E57681F3AA8010018825A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A6791D1503951D0FDA45CA /* Pods-YYText.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YYText/Info.plist;
@@ -507,6 +650,7 @@
 				636E57681F3AA8010018825A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		636E57691F3AA8010018825A /* Build configuration list for PBXNativeTarget "YYTextTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +659,7 @@
 				636E576B1F3AA8010018825A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		636E576C1F3AA8010018825A /* Build configuration list for PBXNativeTarget "YYTextUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +668,7 @@
 				636E576E1F3AA8010018825A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
