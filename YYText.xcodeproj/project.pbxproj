@@ -24,6 +24,9 @@
 		636E57621F3AA8010018825A /* YYTextUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57611F3AA8010018825A /* YYTextUITests.m */; };
 		636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E57701F3AB0AF0018825A /* YYTextManager.m */; };
 		636E57811F3AF6240018825A /* EmoticonQQ.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 636E57801F3AF6240018825A /* EmoticonQQ.bundle */; };
+		63783D571F5E76AF004DE51E /* BullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D561F5E76AF004DE51E /* BullViewController.m */; };
+		63783D5A1F5E7797004DE51E /* BulletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D591F5E7797004DE51E /* BulletView.m */; };
+		63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D5C1F5E7BBF004DE51E /* BulletManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,12 @@
 		636E576F1F3AB0AF0018825A /* YYTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTextManager.h; sourceTree = "<group>"; };
 		636E57701F3AB0AF0018825A /* YYTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTextManager.m; sourceTree = "<group>"; };
 		636E57801F3AF6240018825A /* EmoticonQQ.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmoticonQQ.bundle; sourceTree = "<group>"; };
+		63783D551F5E76AF004DE51E /* BullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BullViewController.h; sourceTree = "<group>"; };
+		63783D561F5E76AF004DE51E /* BullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BullViewController.m; sourceTree = "<group>"; };
+		63783D581F5E7797004DE51E /* BulletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletView.h; sourceTree = "<group>"; };
+		63783D591F5E7797004DE51E /* BulletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletView.m; sourceTree = "<group>"; };
+		63783D5B1F5E7BBE004DE51E /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
+		63783D5C1F5E7BBF004DE51E /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
 		973D63001DD7126D1F897000 /* Pods-YYText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYText/Pods-YYText.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE546FD10C97213F96ADFBA /* libPods-YYText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,6 +188,7 @@
 				6348CCA71F3C498D007F04E2 /* 图文混排 */,
 				6348CCA81F3C499C007F04E2 /* 高仿微博动画 */,
 				6348CCAF1F3C4D09007F04E2 /* Layer动画 */,
+				63783D541F5E7674004DE51E /* 弹幕动画 */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
 				636E57481F3AA8010018825A /* Assets.xcassets */,
 				636E574A1F3AA8010018825A /* LaunchScreen.storyboard */,
@@ -212,6 +222,19 @@
 				636E57631F3AA8010018825A /* Info.plist */,
 			);
 			path = YYTextUITests;
+			sourceTree = "<group>";
+		};
+		63783D541F5E7674004DE51E /* 弹幕动画 */ = {
+			isa = PBXGroup;
+			children = (
+				63783D551F5E76AF004DE51E /* BullViewController.h */,
+				63783D561F5E76AF004DE51E /* BullViewController.m */,
+				63783D581F5E7797004DE51E /* BulletView.h */,
+				63783D591F5E7797004DE51E /* BulletView.m */,
+				63783D5B1F5E7BBE004DE51E /* BulletManager.h */,
+				63783D5C1F5E7BBF004DE51E /* BulletManager.m */,
+			);
+			name = "弹幕动画";
 			sourceTree = "<group>";
 		};
 		9193C93045BE3A1F35452835 /* Frameworks */ = {
@@ -410,12 +433,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */,
+				63783D571F5E76AF004DE51E /* BullViewController.m in Sources */,
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
+				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
 				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				636E57411F3AA8000018825A /* AppDelegate.m in Sources */,
 				6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */,
 				6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */,
 				636E573E1F3AA8000018825A /* main.m in Sources */,
+				63783D5A1F5E7797004DE51E /* BulletView.m in Sources */,
 				6348CCA61F3C3FD4007F04E2 /* AnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

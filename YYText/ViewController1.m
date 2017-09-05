@@ -9,14 +9,23 @@
 #import "ViewController1.h"
 #import "AnimationView.h"
 @interface ViewController1 ()
-
+@property(nonatomic,strong)UIWebView *webview;
 @end
 
 @implementation ViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blueColor];
+    
+//   UIWebView * webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+//    webView.backgroundColor = [UIColor clearColor];
+//    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+//    [self.view addSubview: webView];
+//    [webView loadRequest:request];
+    
+
+    
     AnimationView *animate = [[AnimationView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-250, self.view.frame.size.width, 250)];
     animate.backgroundColor =[UIColor whiteColor];
     

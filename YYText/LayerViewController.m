@@ -22,7 +22,6 @@
     [self load];
     [self load2];
     
-
 }
 -(void)load{
 

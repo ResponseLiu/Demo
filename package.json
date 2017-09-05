@@ -1,0 +1,22 @@
+{
+  "name": "dependencies",
+  "version": "1.0.0",
+  "description": "first init",
+  "main": "index.js",
+  "scripts": {
+    "test": "first test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ResponseLiu/Demo.git"
+  },
+  "keywords": [
+    "first"
+  ],
+  "author": "NB_bike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ResponseLiu/Demo/issues"
+  },
+  "homepage": "https://github.com/ResponseLiu/Demo#readme"
+}

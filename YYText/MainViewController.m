@@ -11,18 +11,48 @@
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray *array;
 @property(nonatomic,strong)NSArray *kind;
+@property (nonatomic, strong) NSString *target;
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self performSelectorInBackground:@selector(connectToServer) withObject:nil];
+    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+       
+        [NSThread sleepForTimeInterval:3];
+        NSLog(@"------1");
+        
+    });
+    dispatch_async(queue, ^{
+        
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"------2");
+        
+    });
+    dispatch_async(queue, ^{
+        
+        [NSThread sleepForTimeInterval:1];
+        NSLog(@"------3");
+        
+    });
+    
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Demo";
-     self.array = @[@"ViewController",@"ViewController1",@"LayerViewController"];
-     self.kind = @[@"图文混排",@"微博动画",@"layer动画"];
+    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController"];
+     self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕"];
     [self initTab];
     // Do any additional setup after loading the view.
+}
+-(void)connectToServer{
+
+    NSLog(@"CONNECT_SEVER");
+
 }
 -(void)initTab{
     

@@ -32,6 +32,7 @@
             btn.frame = CGRectMake(x, y, width, height);
             NSLog(@"%f",x);
             [self.btnArra addObject:btn];
+            NSLog(@"originY：%f",y);
        
         }
          [self animate];
@@ -75,6 +76,7 @@
         CGFloat y = btn.frame.origin.y;
         CGFloat width = btn.frame.size.width;
         CGFloat height = btn.frame.size.height;
+        //这里的话，需要自己计算出一个合适的y值
         btn.frame = CGRectMake(x, [UIScreen mainScreen].bounds.size.height + y-self.frame.origin.y, width, height);
         btn.alpha = 0.0;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(idx * 0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
