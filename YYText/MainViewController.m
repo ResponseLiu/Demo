@@ -44,8 +44,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Demo";
-    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController"];
-     self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕"];
+    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController"];
+     self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情"];
     [self initTab];
     // Do any additional setup after loading the view.
 }

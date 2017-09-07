@@ -5,10 +5,10 @@
 //  Created by 1 on 2017/9/5.
 //  Copyright © 2017年 com.wh1.guozhentang. All rights reserved.
 //
-
 #import "BulletView.h"
-
 @implementation BulletView
+
+
 -(instancetype)initWithComment:(NSString *)comment{
   
     if (self=[super init]) {
@@ -24,10 +24,9 @@
         self.lbComment.text = comment;;
         self.lbComment.frame=CGRectMake(10, 0, width, 30);
     }
-
     return self;
-
 }
+
 -(UILabel *)lbComment{
    
     if (!_lbComment) {
@@ -40,9 +39,9 @@
         
         
     }
-
     return _lbComment;
 }
+
 -(void)startAnimation{
 
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
@@ -53,6 +52,7 @@
     [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         
         frame.origin.x-=wholeWidth;
+        
         self.frame=frame;
         
     } completion:^(BOOL finished) {
@@ -62,8 +62,8 @@
             self.moveStatusBlock();
         }
     }];
-    
 }
+
 -(void)stopAnimation{
 
     [self removeFromSuperview];

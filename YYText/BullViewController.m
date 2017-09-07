@@ -18,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame  = CGRectMake(100, 370, 100, 40);
     [btn setTitle:@"点击我" forState:UIControlStateNormal];
@@ -27,7 +26,6 @@
     [btn setBackgroundImage:[UIImage imageNamed:@"1111"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-    
 
     self.navigationItem.title=@"弹幕";
     
@@ -44,6 +42,7 @@
         
     };
 
+    
     // Do any additional setup after loading the view.
 }
 - (void)clickBtn {
@@ -53,13 +52,13 @@
 -(void)addBulletView:(BulletView *)view{
 
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    
+
     view.frame = CGRectMake(width, view.trajectory*40+100, CGRectGetWidth(view.bounds), CGRectGetHeight(view.bounds));
     
     [self.view addSubview:view];
+    
     [view startAnimation];
-
-
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

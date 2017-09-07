@@ -27,6 +27,11 @@
 		63783D571F5E76AF004DE51E /* BullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D561F5E76AF004DE51E /* BullViewController.m */; };
 		63783D5A1F5E7797004DE51E /* BulletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D591F5E7797004DE51E /* BulletView.m */; };
 		63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D5C1F5E7BBF004DE51E /* BulletManager.m */; };
+		63940C571F611E1E008FA225 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63940C561F611E1E008FA225 /* NewsDetailViewController.m */; };
+		63940C5E1F61469D008FA225 /* newDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = 63940C5C1F61469D008FA225 /* newDetail.css */; };
+		63940C5F1F61469D008FA225 /* newDetail.js in Resources */ = {isa = PBXBuildFile; fileRef = 63940C5D1F61469D008FA225 /* newDetail.js */; };
+		63C0F08F1F5FF16E00BA078B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C0F08E1F5FF16E00BA078B /* 1.png */; };
+		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,13 @@
 		63783D591F5E7797004DE51E /* BulletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletView.m; sourceTree = "<group>"; };
 		63783D5B1F5E7BBE004DE51E /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
 		63783D5C1F5E7BBF004DE51E /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
+		63940C551F611E1E008FA225 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		63940C561F611E1E008FA225 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		63940C5C1F61469D008FA225 /* newDetail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = newDetail.css; sourceTree = "<group>"; };
+		63940C5D1F61469D008FA225 /* newDetail.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = newDetail.js; sourceTree = "<group>"; };
+		63C0F08E1F5FF16E00BA078B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		63C0F0901F6006CF00BA078B /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		63C0F0911F6006CF00BA078B /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		973D63001DD7126D1F897000 /* Pods-YYText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYText/Pods-YYText.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE546FD10C97213F96ADFBA /* libPods-YYText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,11 +197,13 @@
 				636E57401F3AA8000018825A /* AppDelegate.m */,
 				6348CCAC1F3C4A13007F04E2 /* MainViewController.h */,
 				6348CCAD1F3C4A13007F04E2 /* MainViewController.m */,
+				63940C541F611DE9008FA225 /* 新闻详情页 */,
 				6348CCA71F3C498D007F04E2 /* 图文混排 */,
 				6348CCA81F3C499C007F04E2 /* 高仿微博动画 */,
 				6348CCAF1F3C4D09007F04E2 /* Layer动画 */,
 				63783D541F5E7674004DE51E /* 弹幕动画 */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
+				63C0F08E1F5FF16E00BA078B /* 1.png */,
 				636E57481F3AA8010018825A /* Assets.xcassets */,
 				636E574A1F3AA8010018825A /* LaunchScreen.storyboard */,
 				636E574D1F3AA8010018825A /* Info.plist */,
@@ -233,8 +247,21 @@
 				63783D591F5E7797004DE51E /* BulletView.m */,
 				63783D5B1F5E7BBE004DE51E /* BulletManager.h */,
 				63783D5C1F5E7BBF004DE51E /* BulletManager.m */,
+				63C0F0901F6006CF00BA078B /* NSString+Category.h */,
+				63C0F0911F6006CF00BA078B /* NSString+Category.m */,
 			);
 			name = "弹幕动画";
+			sourceTree = "<group>";
+		};
+		63940C541F611DE9008FA225 /* 新闻详情页 */ = {
+			isa = PBXGroup;
+			children = (
+				63940C5C1F61469D008FA225 /* newDetail.css */,
+				63940C5D1F61469D008FA225 /* newDetail.js */,
+				63940C551F611E1E008FA225 /* NewsDetailViewController.h */,
+				63940C561F611E1E008FA225 /* NewsDetailViewController.m */,
+			);
+			name = "新闻详情页";
 			sourceTree = "<group>";
 		};
 		9193C93045BE3A1F35452835 /* Frameworks */ = {
@@ -355,9 +382,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6348CC9F1F3C36DD007F04E2 /* images.bundle in Resources */,
+				63940C5E1F61469D008FA225 /* newDetail.css in Resources */,
 				636E574C1F3AA8010018825A /* LaunchScreen.storyboard in Resources */,
+				63C0F08F1F5FF16E00BA078B /* 1.png in Resources */,
 				636E57811F3AF6240018825A /* EmoticonQQ.bundle in Resources */,
 				636E57491F3AA8010018825A /* Assets.xcassets in Resources */,
+				63940C5F1F61469D008FA225 /* newDetail.js in Resources */,
 				636E57471F3AA8010018825A /* Main.storyboard in Resources */,
 				6348CCA11F3C3885007F04E2 /* tabbar_compose_friend@2x.png in Resources */,
 			);
@@ -439,10 +469,12 @@
 				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				636E57411F3AA8000018825A /* AppDelegate.m in Sources */,
 				6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */,
+				63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */,
 				6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */,
 				636E573E1F3AA8000018825A /* main.m in Sources */,
 				63783D5A1F5E7797004DE51E /* BulletView.m in Sources */,
 				6348CCA61F3C3FD4007F04E2 /* AnimationView.m in Sources */,
+				63940C571F611E1E008FA225 /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
