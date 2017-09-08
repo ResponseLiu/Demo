@@ -32,11 +32,11 @@
     
     WKWebViewConfiguration *configur = [[WKWebViewConfiguration alloc] init];
     
-    //设置configur对象的preferences属性的信息
+    
     WKPreferences *preferences = [[WKPreferences alloc] init];
     configur.preferences = preferences;
     
-    //是否允许与js进行交互，默认是YES的，如果设置为NO，js的代码就不起作用了
+
     preferences.javaScriptEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -52,7 +52,6 @@
     webview.navigationDelegate = self;
     [webview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     [self.view addSubview:webview];
-//     [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
     self.wkWebView= webview;
 
 }

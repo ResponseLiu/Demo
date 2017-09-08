@@ -40,13 +40,12 @@
         NSLog(@"------3");
         
     });
-    
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Demo";
     self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController"];
      self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情"];
     [self initTab];
+    
     // Do any additional setup after loading the view.
 }
 -(void)connectToServer{
@@ -54,19 +53,13 @@
     NSLog(@"CONNECT_SEVER");
 
 }
--(void)initTab{
-    
+-(void)initTab {
     
     UITableView *table = [[UITableView alloc]initWithFrame:self.view.frame];
-    
     table.delegate = self;
     table.dataSource = self;
-    
     [self.view addSubview:table];
     
-
-
-
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -92,7 +85,6 @@
     Class class = NSClassFromString(self.array[indexPath.row]);
     
     [self.navigationController pushViewController:[[class alloc]init] animated:YES];
-    
 
 }
 - (void)didReceiveMemoryWarning {
