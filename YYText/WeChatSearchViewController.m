@@ -5,7 +5,6 @@
 //  Created by 1 on 2017/9/9.
 //  Copyright © 2017年 com.wh1.guozhentang. All rights reserved.
 //
-
 #import "WeChatSearchViewController.h"
 #import "SearchResultViewController.h"
 @interface WeChatSearchViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating,UISearchControllerDelegate>
@@ -38,7 +37,6 @@
 
     if (!_searchController) {
         
-        
         SearchResultViewController *result = [[SearchResultViewController alloc]init];
         result.view.backgroundColor = [UIColor redColor];
         
@@ -54,9 +52,9 @@
         _searchController.searchBar.layer.borderColor=[UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1.0].CGColor;
         [_searchController.searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
         _searchController.searchBar.placeholder= @"请输入关键字搜索";
-        
+        _searchController.searchBar.showsBookmarkButton = YES;
+        [_searchController.searchBar setImage:[UIImage imageNamed:@"语音"] forSearchBarIcon:UISearchBarIconBookmark state:UIControlStateNormal];
         self.definesPresentationContext=YES;
-
     }
 
     return _searchController;
@@ -64,7 +62,6 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return 10;
-    
     
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -74,7 +71,6 @@
     if (!cell) {
         
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-        
     }
     return cell;
     

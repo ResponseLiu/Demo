@@ -32,6 +32,7 @@
 		63940C5F1F61469D008FA225 /* newDetail.js in Resources */ = {isa = PBXBuildFile; fileRef = 63940C5D1F61469D008FA225 /* newDetail.js */; };
 		6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399E6E61F63770B00DF8EF9 /* WeChatSearchViewController.m */; };
 		6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399E6E91F637A3100DF8EF9 /* SearchResultViewController.m */; };
+		6399E6EE1F63972600DF8EF9 /* 语音.png in Resources */ = {isa = PBXBuildFile; fileRef = 6399E6ED1F63972600DF8EF9 /* 语音.png */; };
 		63C0F08F1F5FF16E00BA078B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C0F08E1F5FF16E00BA078B /* 1.png */; };
 		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		6399E6E61F63770B00DF8EF9 /* WeChatSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatSearchViewController.m; sourceTree = "<group>"; };
 		6399E6E81F637A3000DF8EF9 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		6399E6E91F637A3100DF8EF9 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		6399E6ED1F63972600DF8EF9 /* 语音.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "语音.png"; sourceTree = "<group>"; };
 		63C0F08E1F5FF16E00BA078B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		63C0F0901F6006CF00BA078B /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		63C0F0911F6006CF00BA078B /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		636E573B1F3AA8000018825A /* YYText */ = {
 			isa = PBXGroup;
 			children = (
+				6399E6ED1F63972600DF8EF9 /* 语音.png */,
 				6348CCA01F3C3885007F04E2 /* tabbar_compose_friend@2x.png */,
 				6348CC9E1F3C36DD007F04E2 /* images.bundle */,
 				636E57801F3AF6240018825A /* EmoticonQQ.bundle */,
@@ -404,6 +407,7 @@
 				636E574C1F3AA8010018825A /* LaunchScreen.storyboard in Resources */,
 				63C0F08F1F5FF16E00BA078B /* 1.png in Resources */,
 				636E57811F3AF6240018825A /* EmoticonQQ.bundle in Resources */,
+				6399E6EE1F63972600DF8EF9 /* 语音.png in Resources */,
 				636E57491F3AA8010018825A /* Assets.xcassets in Resources */,
 				63940C5F1F61469D008FA225 /* newDetail.js in Resources */,
 				636E57471F3AA8010018825A /* Main.storyboard in Resources */,
