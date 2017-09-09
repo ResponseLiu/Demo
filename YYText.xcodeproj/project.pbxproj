@@ -30,6 +30,8 @@
 		63940C571F611E1E008FA225 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63940C561F611E1E008FA225 /* NewsDetailViewController.m */; };
 		63940C5E1F61469D008FA225 /* newDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = 63940C5C1F61469D008FA225 /* newDetail.css */; };
 		63940C5F1F61469D008FA225 /* newDetail.js in Resources */ = {isa = PBXBuildFile; fileRef = 63940C5D1F61469D008FA225 /* newDetail.js */; };
+		6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399E6E61F63770B00DF8EF9 /* WeChatSearchViewController.m */; };
+		6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399E6E91F637A3100DF8EF9 /* SearchResultViewController.m */; };
 		63C0F08F1F5FF16E00BA078B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C0F08E1F5FF16E00BA078B /* 1.png */; };
 		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,10 @@
 		63940C561F611E1E008FA225 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		63940C5C1F61469D008FA225 /* newDetail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = newDetail.css; sourceTree = "<group>"; };
 		63940C5D1F61469D008FA225 /* newDetail.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = newDetail.js; sourceTree = "<group>"; };
+		6399E6E51F63770B00DF8EF9 /* WeChatSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatSearchViewController.h; sourceTree = "<group>"; };
+		6399E6E61F63770B00DF8EF9 /* WeChatSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatSearchViewController.m; sourceTree = "<group>"; };
+		6399E6E81F637A3000DF8EF9 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		6399E6E91F637A3100DF8EF9 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		63C0F08E1F5FF16E00BA078B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		63C0F0901F6006CF00BA078B /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		63C0F0911F6006CF00BA078B /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 				6348CCA81F3C499C007F04E2 /* 高仿微博动画 */,
 				6348CCAF1F3C4D09007F04E2 /* Layer动画 */,
 				63783D541F5E7674004DE51E /* 弹幕动画 */,
+				6399E6E41F6376D900DF8EF9 /* 高仿微信搜索功能 */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
 				63C0F08E1F5FF16E00BA078B /* 1.png */,
 				636E57481F3AA8010018825A /* Assets.xcassets */,
@@ -262,6 +269,17 @@
 				63940C561F611E1E008FA225 /* NewsDetailViewController.m */,
 			);
 			name = "新闻详情页";
+			sourceTree = "<group>";
+		};
+		6399E6E41F6376D900DF8EF9 /* 高仿微信搜索功能 */ = {
+			isa = PBXGroup;
+			children = (
+				6399E6E51F63770B00DF8EF9 /* WeChatSearchViewController.h */,
+				6399E6E61F63770B00DF8EF9 /* WeChatSearchViewController.m */,
+				6399E6E81F637A3000DF8EF9 /* SearchResultViewController.h */,
+				6399E6E91F637A3100DF8EF9 /* SearchResultViewController.m */,
+			);
+			name = "高仿微信搜索功能";
 			sourceTree = "<group>";
 		};
 		9193C93045BE3A1F35452835 /* Frameworks */ = {
@@ -464,8 +482,10 @@
 			files = (
 				636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */,
 				63783D571F5E76AF004DE51E /* BullViewController.m in Sources */,
+				6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */,
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
 				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
+				6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */,
 				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				636E57411F3AA8000018825A /* AppDelegate.m in Sources */,
 				6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */,

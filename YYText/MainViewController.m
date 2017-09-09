@@ -7,18 +7,23 @@
 //
 
 #import "MainViewController.h"
-
+#import "SearchResultViewController.h"
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray *array;
 @property(nonatomic,strong)NSArray *kind;
 @property (nonatomic, strong) NSString *target;
+
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self performSelectorInBackground:@selector(connectToServer) withObject:nil];
     dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
     
@@ -42,8 +47,8 @@
     });
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Demo";
-    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController"];
-     self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情"];
+    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController"];
+    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索"];
     [self initTab];
     
     // Do any additional setup after loading the view.
@@ -55,6 +60,7 @@
 }
 -(void)initTab {
     
+       
     UITableView *table = [[UITableView alloc]initWithFrame:self.view.frame];
     table.delegate = self;
     table.dataSource = self;
