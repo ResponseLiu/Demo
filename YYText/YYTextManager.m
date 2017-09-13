@@ -37,7 +37,6 @@
         if (at.range.length<=1) {
             
             continue;
-            
         }
         if ([text yy_attribute:YYTextHighlightAttributeName atIndex:at.range.location] == nil) {
             
@@ -46,10 +45,8 @@
             highLight.userInfo = @{@"type":@1};
             [highLight setBorder:border];
             [text yy_setTextHighlight:highLight range:at.range];
-            
         }
     }
-    
     NSArray *resultTopic = [[self regexTopic] matchesInString:text.string options:kNilOptions range:text.yy_rangeOfAll];
     
     for (NSTextCheckingResult *at in resultTopic)

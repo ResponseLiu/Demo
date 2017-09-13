@@ -25,18 +25,15 @@
     [self initProgerss];
     [self requestData];
     [self initWKwebView];
+    
     // Do any additional setup after loading the view.
 }
 -(void)initWKwebView{
  
     
     WKWebViewConfiguration *configur = [[WKWebViewConfiguration alloc] init];
-    
-    
     WKPreferences *preferences = [[WKPreferences alloc] init];
     configur.preferences = preferences;
-    
-
     preferences.javaScriptEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -52,8 +49,7 @@
     webview.navigationDelegate = self;
     [webview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     [self.view addSubview:webview];
-    self.wkWebView= webview;
-
+     self.wkWebView= webview;
 }
 -(void)initProgerss{
 
@@ -61,10 +57,10 @@
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 1)];
     progressView.progress = 0.0;
     progressView.progressTintColor = [UIColor yellowColor];
-    
     [self.view addSubview:progressView];
     self.progressView = progressView;
 
+    
 }
 -(void)requestData{
 
@@ -110,7 +106,6 @@
      NSString *body = self.htmlDic[@"body"];
      
      NSString *title = self.htmlDic[@"title"];
-     
      
      NSDictionary *videoDict = self.htmlDic[@"video"][0];
      NSString *videoUrl = videoDict[@"mp4_url"];
@@ -203,12 +198,10 @@
     [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:@"openBigPicture"];
     [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:@"openVideoPlayer"];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 
