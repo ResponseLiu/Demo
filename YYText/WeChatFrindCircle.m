@@ -25,7 +25,7 @@
     
     self.data = @[@{
         @"name":@"Summer",
-        @"detail":@"心安若水，轻盈回眸，岁月的流光里流淌着千年的情愫，蓄半笺墨痕，生命的小舟在书海里迤逦而行，缬一朵梨花素雪的容颜，绽一眉芳心暗许的思念，弦一曲，荡涤纤尘的天籁，织一绵古韵幽香的梦境……"
+        @"detail":@"心安若水，轻盈回眸，岁月的流光里流淌着千年的情愫:smile:，蓄半笺墨痕，生命的小舟在书海里迤逦而行，缬一朵梨花素雪的容颜，绽一眉芳心暗许的思念，弦一曲，荡涤纤尘的天籁，织一绵古韵幽香的梦境……:smile::cry::hehe:"
 
         },@{
                       @"name":@"Summer",
@@ -33,7 +33,7 @@
                       
                       },@{
                       @"name":@"Summer",
-                      @"detail":@"流水潺潺，心韵悠悠，落花满庭，暗香盈袖。掬一捧湖水，拈一缕秋香。婉约明媚的律动在旖旎中绾结成洁白无瑕的心莲，任一曲水调轻轻的流泻，静静的蔓延，在薄如婵翼的素笺上浸透，再浸透……"
+                      @"detail":@"流水潺潺，心韵悠悠，落花满庭，暗香盈袖。掬一捧湖水，拈一缕秋香。婉约明媚的律动在旖旎中绾结成洁白无瑕的心莲，任一曲水调轻轻的流泻，静静的蔓延，在薄如婵翼的素笺上浸透，再浸透……:smile::smile::smile::smile::smile:"
                       
                       },@{
                       @"name":@"Summer",
@@ -41,7 +41,7 @@
                       
                       },@{
                       @"name":@"Summer",
-                      @"detail":@"捧一本诗集，在唐风宋雨的古韵里，寻你，一枝出淤泥而不染的莲，濯濯迎风而魅，莲步轻移，向我靠近，看你紫色的裙袂在风中轻舞飞扬，而绚烂的紫色，熏染了层层幻梦，抖落一地的相思。"
+                      @"detail":@"捧一本诗集:cry::cry::cry:，在唐风宋雨的古韵里:smile:，寻你，一枝出淤泥而不染的莲，濯濯迎风而魅，莲步轻移，向我靠近，看你紫色的裙袂在风中轻舞飞扬，而绚烂的紫色，熏染了层层幻梦，抖落一地的相思。"
                       
                       }];
     
@@ -89,7 +89,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     
-    return [self getHeight:indexPath]+45;
+    return [self getHeight:indexPath]+60;
 
 }
 -(WeChatHeader *)WeChatHeader{
@@ -100,8 +100,8 @@
         _WeChatHeader.backgroundColor = [UIColor whiteColor];
     
     }
+    
     return _WeChatHeader;
-
 }
 -(CGFloat)getHeight:(NSIndexPath *)index{
 

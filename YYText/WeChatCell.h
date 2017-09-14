@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <YYText.h>
 @interface WeChatCell : UITableViewCell
 @property(nonatomic,strong)NSDictionary *dic;
 @end
