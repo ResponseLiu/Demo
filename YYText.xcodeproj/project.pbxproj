@@ -39,6 +39,8 @@
 		6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399E6E91F637A3100DF8EF9 /* SearchResultViewController.m */; };
 		6399E6EE1F63972600DF8EF9 /* 语音.png in Resources */ = {isa = PBXBuildFile; fileRef = 6399E6ED1F63972600DF8EF9 /* 语音.png */; };
 		6399E6F21F6397AB00DF8EF9 /* WeChatFrindCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399E6F11F6397AB00DF8EF9 /* WeChatFrindCircle.m */; };
+		63BAED3F1F6CFA4100C3BBB5 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAED3E1F6CFA4100C3BBB5 /* FMDBViewController.m */; };
+		63BAED421F6CFA8E00C3BBB5 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */; };
 		63C0F08F1F5FF16E00BA078B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C0F08E1F5FF16E00BA078B /* 1.png */; };
 		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,10 @@
 		6399E6ED1F63972600DF8EF9 /* 语音.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "语音.png"; sourceTree = "<group>"; };
 		6399E6F01F6397AB00DF8EF9 /* WeChatFrindCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatFrindCircle.h; sourceTree = "<group>"; };
 		6399E6F11F6397AB00DF8EF9 /* WeChatFrindCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatFrindCircle.m; sourceTree = "<group>"; };
+		63BAED3D1F6CFA4100C3BBB5 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		63BAED3E1F6CFA4100C3BBB5 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		63BAED401F6CFA8E00C3BBB5 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		63C0F08E1F5FF16E00BA078B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		63C0F0901F6006CF00BA078B /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		63C0F0911F6006CF00BA078B /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
@@ -229,6 +235,7 @@
 				63783D541F5E7674004DE51E /* 弹幕动画 */,
 				6399E6EF1F63978B00DF8EF9 /* 微信朋友圈 */,
 				6399E6E41F6376D900DF8EF9 /* 高仿微信搜索功能 */,
+				63BAED3C1F6CFA1700C3BBB5 /* New Group */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
 				63C0F08E1F5FF16E00BA078B /* 1.png */,
 				636E57481F3AA8010018825A /* Assets.xcassets */,
@@ -317,6 +324,17 @@
 				639249CC1F6912FE0026019A /* MoreImageView.m */,
 			);
 			name = "微信朋友圈";
+			sourceTree = "<group>";
+		};
+		63BAED3C1F6CFA1700C3BBB5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				63BAED3D1F6CFA4100C3BBB5 /* FMDBViewController.h */,
+				63BAED3E1F6CFA4100C3BBB5 /* FMDBViewController.m */,
+				63BAED401F6CFA8E00C3BBB5 /* FMDBManager.h */,
+				63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		9193C93045BE3A1F35452835 /* Frameworks */ = {
@@ -522,11 +540,13 @@
 			files = (
 				636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */,
 				63783D571F5E76AF004DE51E /* BullViewController.m in Sources */,
+				63BAED421F6CFA8E00C3BBB5 /* FMDBManager.m in Sources */,
 				6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */,
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
 				639249CD1F6912FE0026019A /* MoreImageView.m in Sources */,
 				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
 				6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */,
+				63BAED3F1F6CFA4100C3BBB5 /* FMDBViewController.m in Sources */,
 				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				639249C61F6906AC0026019A /* WeChatCell.m in Sources */,
 				636E57411F3AA8000018825A /* AppDelegate.m in Sources */,

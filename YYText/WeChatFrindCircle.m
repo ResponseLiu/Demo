@@ -52,14 +52,13 @@
 
     if (!_circleTab) {
         
-        _circleTab = [[UITableView alloc]initWithFrame:CGRectMake(0, -90, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height+100) style:UITableViewStylePlain];
+        _circleTab = [[UITableView alloc]initWithFrame:CGRectMake(0, -90, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height+90) style:UITableViewStylePlain];
         _circleTab.showsVerticalScrollIndicator = NO;
         _circleTab.showsHorizontalScrollIndicator = NO;
         _circleTab.delegate = self;
         _circleTab.dataSource = self;
         _circleTab.backgroundColor = [UIColor whiteColor];
         _circleTab.tableHeaderView = [self WeChatHeader];
-        
         
     }
     return _circleTab;
@@ -101,7 +100,10 @@
     
     }
     
+    
     return _WeChatHeader;
+    
+    
 }
 -(CGFloat)getHeight:(NSIndexPath *)index{
 

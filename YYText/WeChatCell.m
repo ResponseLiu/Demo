@@ -92,10 +92,8 @@
     paragraphStyle.lineSpacing = 5; // 调整行间距
     NSRange range = NSMakeRange(0, [str length]);
     [text addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
-    
     [text setYy_color:[UIColor blackColor]];
     [text setYy_font:[UIFont systemFontOfSize:15]];
-    
     return text;
 }
 -(YYTextSimpleEmoticonParser *)emotionActPic{

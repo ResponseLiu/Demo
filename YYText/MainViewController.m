@@ -25,7 +25,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self performSelectorInBackground:@selector(connectToServer) withObject:nil];
-    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_TARGET_QUEUE_DEFAULT);
     
     dispatch_async(queue, ^{
        
@@ -46,8 +46,8 @@
         
     });
     self.view.backgroundColor = [UIColor whiteColor];
-    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle"];
-    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈"];
+    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle",@"FMDBViewController"];
+    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈",@"FMDB多线程执行"];
     [self initTab];
     
     // Do any additional setup after loading the view.
