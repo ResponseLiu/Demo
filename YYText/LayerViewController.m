@@ -58,8 +58,6 @@
     [dotLayer1 addAnimation:animation forKey:nil];
 
 
-
-
 }
 -(void)circle{
 
@@ -93,8 +91,6 @@
     alpha.duration = 2;
     
     
-    
-    
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[base,alpha];
     group.duration = 2;
@@ -111,7 +107,6 @@
     
     replicalayer1.position = CGPointMake(self.view.center.x, self.view.center.y-150);
     replicalayer1.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.2].CGColor;
-    
     replicalayer1.cornerRadius = 10;
     [self.view.layer addSublayer:replicalayer1];
     
