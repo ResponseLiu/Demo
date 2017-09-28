@@ -8,7 +8,8 @@
 
 #import "ViewController3.h"
 #import "ViewController4.h"
-@interface ViewController3 ()
+#import "TransitionModel.h"
+@interface ViewController3 ()<UINavigationControllerDelegate>
 
 @end
 
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
-    
+      self.navigationController.delegate = self;
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     
     button.backgroundColor = [UIColor whiteColor];
@@ -26,13 +27,36 @@
     
     // Do any additional setup after loading the view.
 }
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    
+    // If the animation operation now is push, return custom transition.
+    // 判断如果当前执行的是Push操作，就返回我们自定义的push动画对象。
+    
+    if ( operation == UINavigationControllerOperationPush) {
+        
+        return [TransitionModel PushWithTransition:XPresentWithPresent];
+    }else{
+        
+        
+        return [TransitionModel PushWithTransition:XPressentWithDismiss];
+        
+    }
+    
+    
+    
+    
+    
+}
 -(void)Click{
 
 
 
     ViewController4 *four = [[ViewController4 alloc]init];
     
-    [self presentViewController:four animated:YES completion:nil];
+    [self.navigationController pushViewController:four animated:YES];
 
 }
 - (void)didReceiveMemoryWarning {

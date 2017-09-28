@@ -48,7 +48,7 @@
     
     UIView *contain = [transitionContext containerView];
     
-    UIView * tempView = [fromVC.view snapshotViewAfterScreenUpdates:YES];
+    UIView * tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
     tempView.frame = fromVC.view.frame;
     
     fromVC.view.hidden = YES;
@@ -56,7 +56,7 @@
     [contain addSubview:toVC.view];
     [contain addSubview:tempView];
    
-    [UIView animateWithDuration:.5 animations:^{
+    [UIView animateWithDuration:.6 animations:^{
         
         tempView.alpha = 0;
        

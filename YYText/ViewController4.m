@@ -8,7 +8,7 @@
 
 #import "ViewController4.h"
 #import "TransitionModel.h"
-@interface ViewController4 ()<UIViewControllerTransitioningDelegate>
+@interface ViewController4 ()<UIViewControllerTransitioningDelegate,UINavigationControllerDelegate>
 
 @end
 
@@ -19,6 +19,7 @@
     self.view.backgroundColor = [UIColor blueColor];
     
     self.transitioningDelegate = self;
+    self.navigationController.delegate = self;
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     
     button.backgroundColor = [UIColor whiteColor];
@@ -28,6 +29,27 @@
     
     // Do any additional setup after loading the view.
 }
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    
+    // If the animation operation now is push, return custom transition.
+    // 判断如果当前执行的是Push操作，就返回我们自定义的push动画对象。
+    
+    if ( operation == UINavigationControllerOperationPush) {
+        
+        return [TransitionModel PushWithTransition:XPresentWithPresent];
+    }else{
+    
+    
+     return [TransitionModel PushWithTransition:XPressentWithDismiss];
+    
+    }
+       
+}
+
+
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
 
     return [TransitionModel PushWithTransition:XPresentWithPresent];
@@ -41,7 +63,7 @@
 }
 -(void)dismiss{
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 - (void)didReceiveMemoryWarning {
