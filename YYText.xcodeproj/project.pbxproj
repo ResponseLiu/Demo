@@ -33,6 +33,7 @@
 		63783D571F5E76AF004DE51E /* BullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D561F5E76AF004DE51E /* BullViewController.m */; };
 		63783D5A1F5E7797004DE51E /* BulletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D591F5E7797004DE51E /* BulletView.m */; };
 		63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63783D5C1F5E7BBF004DE51E /* BulletManager.m */; };
+		63830FB91F7E29500025D959 /* MovieFileOutPut.m in Sources */ = {isa = PBXBuildFile; fileRef = 63830FB81F7E29500025D959 /* MovieFileOutPut.m */; };
 		639249C31F6905DB0026019A /* WeChatHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 639249C21F6905DB0026019A /* WeChatHeader.m */; };
 		639249C61F6906AC0026019A /* WeChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639249C51F6906AC0026019A /* WeChatCell.m */; };
 		639249C81F690A1D0026019A /* WechatIMG77.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 639249C71F690A1D0026019A /* WechatIMG77.jpeg */; };
@@ -121,6 +122,8 @@
 		63783D591F5E7797004DE51E /* BulletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletView.m; sourceTree = "<group>"; };
 		63783D5B1F5E7BBE004DE51E /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
 		63783D5C1F5E7BBF004DE51E /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
+		63830FB71F7E29500025D959 /* MovieFileOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieFileOutPut.h; sourceTree = "<group>"; };
+		63830FB81F7E29500025D959 /* MovieFileOutPut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieFileOutPut.m; sourceTree = "<group>"; };
 		639249C11F6905DB0026019A /* WeChatHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatHeader.h; sourceTree = "<group>"; };
 		639249C21F6905DB0026019A /* WeChatHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatHeader.m; sourceTree = "<group>"; };
 		639249C41F6906AC0026019A /* WeChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatCell.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 			children = (
 				636701D21F7CCDA70047E798 /* MovieParseViewController.h */,
 				636701D31F7CCDA70047E798 /* MovieParseViewController.m */,
+				63830FB71F7E29500025D959 /* MovieFileOutPut.h */,
+				63830FB81F7E29500025D959 /* MovieFileOutPut.m */,
 				636701D91F7CD7C80047E798 /* FMLPlayLayerView.h */,
 				636701DA1F7CD7C90047E798 /* FMLPlayLayerView.m */,
 				63F452991F7CECE1000ABA34 /* UIImage+FMLClipRect.h */,
@@ -636,6 +641,7 @@
 				63783D5A1F5E7797004DE51E /* BulletView.m in Sources */,
 				639249C31F6905DB0026019A /* WeChatHeader.m in Sources */,
 				6348CCA61F3C3FD4007F04E2 /* AnimationView.m in Sources */,
+				63830FB91F7E29500025D959 /* MovieFileOutPut.m in Sources */,
 				63940C571F611E1E008FA225 /* NewsDetailViewController.m in Sources */,
 				6399E6F21F6397AB00DF8EF9 /* WeChatFrindCircle.m in Sources */,
 			);

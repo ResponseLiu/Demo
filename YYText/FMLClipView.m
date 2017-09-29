@@ -35,7 +35,6 @@ static NSString * const FMLScaledImageId = @"FMLScaledImageId";
           [self initView];
           [self initData];
     }
-    
     return self;
 }
 -(void)initData{
@@ -67,9 +66,7 @@ static NSString * const FMLScaledImageId = @"FMLScaledImageId";
 }
 -(void)initView{
     
-    
      [self addSubview:self.collectionView];
-    
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -79,10 +76,7 @@ static NSString * const FMLScaledImageId = @"FMLScaledImageId";
 {
     FMLScaledImageViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.scaledIamgeView.tag = indexPath.row;
-    
     cell.imageData = self.collectionImages[indexPath.row];
-    
     return cell;
 }
 - (UICollectionView *)collectionView
