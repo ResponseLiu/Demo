@@ -18,7 +18,11 @@
 @implementation MovieParseViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+    } else {
+        // Fallback on earlier versions
+    }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"导出" style:0 target:self action:@selector(click)];
     self.title = @"视频裁剪";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -41,19 +45,17 @@
 }
 -(void)export:(NSNotification *)user{
     
-    
     MovieFileOutPut *videoCommand = [[MovieFileOutPut alloc] initWithCompotion:[user.object mutableComposition]];
-    
     [videoCommand exportUrl];
-    
 }
 -(void)get:(NSNotification *)user{
     
-    
+
+    MovieFileOutPut *output = (MovieFileOutPut *)user.object;
+    NSLog(@"---%f",[self fileSize:output.assetURL]);
     if(![user.object assetURL]){
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
             
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"导出视频失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alertView show];
@@ -62,7 +64,6 @@
     }else{
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
             
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"导出视频成功" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alertView show];
@@ -85,17 +86,24 @@
        _playerView.frame = self.view.frame;
        
     }
-    return _playerView;
     
+    return _playerView;
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     if (self.playerView.player.rate>0) {
+        
          [self.playerView.player pause];
+        
     }else{
         
           [self.playerView.player play];
     }
+    NSLog(@"---%f",[self fileSize:[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"Test" ofType:@"mp4"]]]);
+}
+- (CGFloat)fileSize:(NSURL *)path
+{
+    return [[NSData dataWithContentsOfURL:path] length]/1024.00 /1024.00;
 }
 -(void)dealloc {
     
@@ -105,7 +113,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

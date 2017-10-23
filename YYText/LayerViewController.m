@@ -17,7 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.view.backgroundColor = [UIColor whiteColor];
- 
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+    } else {
+        // Fallback on earlier versions
+    }
     [self circle];
     [self load];
     [self load2];

@@ -16,8 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+    } else {
+        // Fallback on earlier versions
+    }
     self.view.backgroundColor = [UIColor blueColor];
-    
     self.transitioningDelegate = self;
     self.navigationController.delegate = self;
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];

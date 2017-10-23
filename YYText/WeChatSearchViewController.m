@@ -17,7 +17,14 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"通讯录";
-    
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+        self.automaticallyAdjustsScrollViewInsets = YES;
+        
+    }
     [self initTab];
     
     // Do any additional setup after loading the view.
@@ -25,7 +32,7 @@
 -(void)initTab {
     
 
-    UITableView *table = [[UITableView alloc]initWithFrame:self.view.frame];
+    UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
     table.delegate = self;
     table.dataSource = self;
     [self.view addSubview:table];

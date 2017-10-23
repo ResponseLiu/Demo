@@ -19,6 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+    } else {
+        // Fallback on earlier versions
+    }
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"朋友圈";
     [self.view addSubview:self.circleTab];

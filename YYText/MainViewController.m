@@ -28,12 +28,13 @@ __weak NSString *string_weak_ = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    NSObject *obj1 = nil;
     
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    NSObject *obj2 =  [obj1 copy];
+    
+    NSLog(@"-%@",obj2);
+    
     [self performSelectorInBackground:@selector(connectToServer) withObject:nil];
         
      NSLog(@"string3: %@", string_weak_);
@@ -58,8 +59,8 @@ __weak NSString *string_weak_ = nil;
 //        
 //    });
     self.view.backgroundColor = [UIColor whiteColor];
-    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle",@"FMDBViewController",@"ViewController3",@"MovieParseViewController"];
-    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈",@"FMDB多线程执行",@"转场动画",@"视频裁剪"];
+    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle",@"FMDBViewController",@"ViewController3",@"MovieParseViewController",@"DownLoadViewController",@"BannerScrollViewController"];
+    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈",@"FMDB多线程执行",@"转场动画",@"视频裁剪",@"大文件下载",@"无限轮播"];
     [self initTab];
     
     // Do any additional setup after loading the view.
@@ -67,21 +68,17 @@ __weak NSString *string_weak_ = nil;
 -(void)connectToServer{
 
     NSLog(@"CONNECT_SEVER");
-
 }
 -(void)initTab {
     
-       
-    UITableView *table = [[UITableView alloc]initWithFrame:self.view.frame];
+    UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 116, self.view.frame.size.width, self.view.frame.size.height-116)];
     table.delegate = self;
     table.dataSource = self;
     [self.view addSubview:table];
-    
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
     return self.kind.count;
-
 
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -100,8 +97,10 @@ __weak NSString *string_weak_ = nil;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     Class class = NSClassFromString(self.array[indexPath.row]);
+   
     
-    [self.navigationController pushViewController:[[class alloc]init] animated:YES];
+    
+    [self.navigationController pushViewController:[[class alloc]init]    animated:YES];
 
 }
 - (void)didReceiveMemoryWarning {

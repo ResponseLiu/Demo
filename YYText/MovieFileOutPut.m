@@ -15,26 +15,21 @@
         
         _mutableComposition = Compostion;
     }
-    
     return self;
-    
-    
 }
 -(void)TrimWith:(AVAsset *)asset with:(Float64)start with:(Float64)end{
-    
+
     AVAssetTrack *audio = nil;
     AVAssetTrack *video = nil;
     
     if ([[asset tracksWithMediaType:AVMediaTypeAudio] count] != 0){
         
         audio = [asset tracksWithMediaType:AVMediaTypeAudio][0];
-        
     }
     if ([[asset tracksWithMediaType:AVMediaTypeVideo] count] != 0){
         
          video = [asset tracksWithMediaType:AVMediaTypeVideo][0];
     }
-    
     _mutableComposition = [AVMutableComposition composition];
     CMTime insertionPoint = kCMTimeZero;
     CMTime startDuration = CMTimeMakeWithSeconds(start, asset.fml_getFPS);
@@ -58,7 +53,6 @@
         compositionAudioTrack.preferredTransform = video.preferredTransform;
     }
      [[NSNotificationCenter defaultCenter] postNotificationName:@"export" object:self];
-    
 }
 -(void)exportUrl{
     
@@ -71,17 +65,17 @@
     outputURL = [outputURL stringByAppendingPathComponent:@"output.mp4"];
     [manager removeItemAtPath:outputURL error:nil];
     
-    AVAssetExportSession *export = [[AVAssetExportSession alloc]initWithAsset:[self.mutableComposition copy] presetName:AVAssetExportPreset640x480];
-    
+    AVAssetExportSession *export = [[AVAssetExportSession alloc]initWithAsset:[self.mutableComposition copy] presetName:AVAssetExportPresetMediumQuality];
+    export.shouldOptimizeForNetworkUse = true;
     export.outputURL = [NSURL fileURLWithPath:outputURL];
-    export.outputFileType = AVFileTypeMPEG4;
-    
+    export.outputFileType = AVFileTypeQuickTimeMovie;
     [export exportAsynchronouslyWithCompletionHandler:^{
         
         switch (export.status) {
             case AVAssetExportSessionStatusCompleted:
             {
                   _assetURL = export.outputURL;
+                NSLog(@"---%@",outputURL);
                   [[NSNotificationCenter defaultCenter]postNotificationName:@"success" object:self];
             }
                 break;
@@ -89,8 +83,6 @@
             default:
                 break;
         }
-        
     }];
-    
 }
 @end

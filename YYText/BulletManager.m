@@ -74,6 +74,7 @@
     
     view.trajectory=trajectorys;
     [self.bulletViews addObject:view];
+    
     __weak typeof(view) weakself = view;
     __weak typeof(self) myself = self;
 

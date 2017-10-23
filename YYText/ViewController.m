@@ -18,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+    } else {
+        // Fallback on earlier versions
+    }
      self.view.backgroundColor = [UIColor whiteColor];
     CGSize size = CGSizeMake(self.view.frame.size.width-20, CGFLOAT_MAX);
     YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:size text: [[YYTextManager SharedManager]regionAt_manager]];

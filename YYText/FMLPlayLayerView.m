@@ -27,7 +27,6 @@
 - (void)setPlayer:(AVPlayer *)player {
     self.playerLayer.player = player;
 }
-
 // override UIView
 + (Class)layerClass {
     return [AVPlayerLayer class];

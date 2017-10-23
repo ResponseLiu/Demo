@@ -53,13 +53,11 @@
 }
 -(void)initProgerss{
 
-
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 1)];
     progressView.progress = 0.0;
     progressView.progressTintColor = [UIColor yellowColor];
     [self.view addSubview:progressView];
     self.progressView = progressView;
-
     
 }
 -(void)requestData{
@@ -155,7 +153,6 @@
          body = [body stringByReplacingOccurrencesOfString:imageRef withString:imageHtml];
      
      }
-     
      NSURL *cssPath = [[NSBundle mainBundle] URLForResource:@"newDetail" withExtension:@"css"];
      NSURL *jsPath = [[NSBundle mainBundle] URLForResource:@"newDetail" withExtension:@"js"];
      
@@ -211,5 +208,16 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+NSString *getSave(NSString *name){
+    
+    
+    return @"444";
+    
+}
+void Save(NSString *name){
+    
+    
+    
+    
+}
 @end
