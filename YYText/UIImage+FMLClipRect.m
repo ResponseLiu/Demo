@@ -42,7 +42,6 @@
         return nil;
     }
 }
-
 + (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize maxDataSize:(NSUInteger)dataSize
 {
     UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize - 1, image.size.height * scaleSize - 1));

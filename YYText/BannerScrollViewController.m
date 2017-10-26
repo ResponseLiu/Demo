@@ -8,6 +8,7 @@
 
 #import "BannerScrollViewController.h"
 #import "BSYScrollView.h"
+#import "NotificationScrollView.h"
 @interface BannerScrollViewController ()
 
 @end
@@ -30,6 +31,10 @@
         
     };
     
+    NotificationScrollView *scroll1 = [[NotificationScrollView alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 200)];
+    scroll1.imageArra=@[@"1.jpg",@"2.jpg"];
+    
+    [self.view addSubview:scroll1];
     // Do any additional setup after loading the view.
 }
 

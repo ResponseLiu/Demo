@@ -13,6 +13,7 @@
 		632397BC1F9B46F200A8E31D /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 632397B51F9B46D400A8E31D /* 3.jpg */; };
 		632397BD1F9B46F200A8E31D /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 632397B91F9B46D500A8E31D /* 4.jpg */; };
 		632397BE1F9B46F200A8E31D /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 632397B81F9B46D500A8E31D /* 5.jpg */; };
+		6330FB8A1FA1BE4200DF4FFC /* NotificationScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FB891FA1BE4200DF4FFC /* NotificationScrollView.m */; };
 		633DC98C1F723D3F0029CC98 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 633DC98B1F723D3F0029CC98 /* ViewController3.m */; };
 		633DC98F1F723D490029CC98 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 633DC98E1F723D490029CC98 /* ViewController4.m */; };
 		633DC9921F723DC00029CC98 /* TransitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 633DC9911F723DC00029CC98 /* TransitionModel.m */; };
@@ -91,6 +92,8 @@
 		632397B71F9B46D400A8E31D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		632397B81F9B46D500A8E31D /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		632397B91F9B46D500A8E31D /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		6330FB881FA1BE4200DF4FFC /* NotificationScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationScrollView.h; sourceTree = "<group>"; };
+		6330FB891FA1BE4200DF4FFC /* NotificationScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationScrollView.m; sourceTree = "<group>"; };
 		633DC98A1F723D3F0029CC98 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		633DC98B1F723D3F0029CC98 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
 		633DC98D1F723D490029CC98 /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
@@ -461,6 +464,8 @@
 				63C84A461F9B3956006F3603 /* BannerScrollViewController.m */,
 				63C84A481F9B39E4006F3603 /* BSYScrollView.h */,
 				63C84A491F9B39E4006F3603 /* BSYScrollView.m */,
+				6330FB881FA1BE4200DF4FFC /* NotificationScrollView.h */,
+				6330FB891FA1BE4200DF4FFC /* NotificationScrollView.m */,
 			);
 			name = "无限轮播图";
 			sourceTree = "<group>";
@@ -684,6 +689,7 @@
 				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
 				6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */,
 				636701D41F7CCDA70047E798 /* MovieParseViewController.m in Sources */,
+				6330FB8A1FA1BE4200DF4FFC /* NotificationScrollView.m in Sources */,
 				63C84A4A1F9B39E4006F3603 /* BSYScrollView.m in Sources */,
 				63F4529A1F7CECE2000ABA34 /* UIImage+FMLClipRect.m in Sources */,
 				633DC98F1F723D490029CC98 /* ViewController4.m in Sources */,
