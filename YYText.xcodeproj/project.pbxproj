@@ -61,6 +61,7 @@
 		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
 		63C84A471F9B3956006F3603 /* BannerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C84A461F9B3956006F3603 /* BannerScrollViewController.m */; };
 		63C84A4A1F9B39E4006F3603 /* BSYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C84A491F9B39E4006F3603 /* BSYScrollView.m */; };
+		63EB8DAC1FB6B979008E1FB1 /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EB8DAB1FB6B979008E1FB1 /* DownLoadCell.m */; };
 		63F452901F7CE857000ABA34 /* FMLClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F4528F1F7CE857000ABA34 /* FMLClipView.m */; };
 		63F452941F7CE9D1000ABA34 /* FMLScaledImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F452911F7CE9D0000ABA34 /* FMLScaledImageViewCell.m */; };
 		63F452971F7CEC41000ABA34 /* AVAsset+FMLVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F452961F7CEC40000ABA34 /* AVAsset+FMLVideo.m */; };
@@ -178,6 +179,8 @@
 		63C84A461F9B3956006F3603 /* BannerScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerScrollViewController.m; sourceTree = "<group>"; };
 		63C84A481F9B39E4006F3603 /* BSYScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSYScrollView.h; sourceTree = "<group>"; };
 		63C84A491F9B39E4006F3603 /* BSYScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSYScrollView.m; sourceTree = "<group>"; };
+		63EB8DAA1FB6B979008E1FB1 /* DownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
+		63EB8DAB1FB6B979008E1FB1 /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
 		63F4528E1F7CE857000ABA34 /* FMLClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLClipView.h; sourceTree = "<group>"; };
 		63F4528F1F7CE857000ABA34 /* FMLClipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLClipView.m; sourceTree = "<group>"; };
 		63F452911F7CE9D0000ABA34 /* FMLScaledImageViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLScaledImageViewCell.m; sourceTree = "<group>"; };
@@ -339,7 +342,7 @@
 				633DC9891F723D110029CC98 /* New Group1 */,
 				63C84A441F9B3927006F3603 /* 无限轮播图 */,
 				636701D11F7CCCDE0047E798 /* 视频裁剪 */,
-				63ADF1041F91E7E200F0A7E0 /* 文件下载 */,
+				63ADF1041F91E7E200F0A7E0 /* 视频下载 */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
 				63C0F08E1F5FF16E00BA078B /* 1.png */,
 				636E57481F3AA8010018825A /* Assets.xcassets */,
@@ -430,15 +433,17 @@
 			name = "微信朋友圈";
 			sourceTree = "<group>";
 		};
-		63ADF1041F91E7E200F0A7E0 /* 文件下载 */ = {
+		63ADF1041F91E7E200F0A7E0 /* 视频下载 */ = {
 			isa = PBXGroup;
 			children = (
 				63ADF1051F91E83B00F0A7E0 /* DownLoadViewController.h */,
 				63ADF1061F91E83B00F0A7E0 /* DownLoadViewController.m */,
+				63EB8DAA1FB6B979008E1FB1 /* DownLoadCell.h */,
+				63EB8DAB1FB6B979008E1FB1 /* DownLoadCell.m */,
 				63ADF1081F91EDA400F0A7E0 /* DownLoadManager.h */,
 				63ADF1091F91EDA500F0A7E0 /* DownLoadManager.m */,
 			);
-			name = "文件下载";
+			name = "视频下载";
 			sourceTree = "<group>";
 		};
 		63BAED3C1F6CFA1700C3BBB5 /* FMDB */ = {
@@ -686,6 +691,7 @@
 				6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */,
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
 				639249CD1F6912FE0026019A /* MoreImageView.m in Sources */,
+				63EB8DAC1FB6B979008E1FB1 /* DownLoadCell.m in Sources */,
 				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
 				6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */,
 				636701D41F7CCDA70047E798 /* MovieParseViewController.m in Sources */,

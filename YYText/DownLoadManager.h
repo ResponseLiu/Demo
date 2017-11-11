@@ -8,20 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef  void(^ProgressBlock)(float progress);
-typedef  void(^Finished)(NSString *templePath);
+
 @interface DownLoadManager : NSObject
 
-@property(nonatomic,copy)ProgressBlock progress;
 
-@property(nonatomic,copy)Finished finish;
 
 +(instancetype)Shared;
 
--(void)startDownLoad:(NSURL *)url;
+-(void)startDownLoad:(NSURL *)url withProgress:(void(^)(Float32 progress))block withCompletion:(void(^)(NSString * templePath))success;
 
--(void)pause;
-
--(void)restart;
+-(BOOL)checkisDownLoad:(NSString *)path;
 
 @end
