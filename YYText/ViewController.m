@@ -29,9 +29,10 @@
     NSLog(@"---%f",layout.textBoundingSize.height);
     YYLabel *label = [YYLabel new];
     label.highlightTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
-        
+        NSString *click = [text.string substringWithRange:range];
+        NSLog(@"---%@",click);
         YYTextHighlight *height = [text yy_attribute:YYTextHighlightAttributeName atIndex:range.location];
-        NSLog(@"---%@",height.userInfo);
+        
         
     };
     label.frame = CGRectMake(10, 64, self.view.frame.size.width-20, layout.textBoundingSize.height);

@@ -64,7 +64,7 @@
     NSLog(@"-%ld-%d",(long)indexpath.row,[[DownLoadManager Shared]checkisDownLoad:path]);
     if ([[DownLoadManager Shared]checkisDownLoad:path]==YES) {
         
-        NSLog(@"--isload");
+        NSLog(@"--正在下载");
         
     } else{
         
@@ -81,59 +81,9 @@
             [updatecell.starDownLoad setTitle:@"已完成" forState:UIControlStateNormal];
             
         }];
-        
-        
     }
-    
-   
-    
 }
 
--(void)download{
-    
-    if (self.starDownLoad.isSelected) {
-
-        [self.starDownLoad setTitle:@"开始下载" forState:0];
-
-    }else{
-//https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=1aca17a610d74a7dbaca6e97da87829b&line=0&app_id=1112&vquality=normal
-//https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=5556cf117e144330a24970d59fc87f86&line=0&app_id=1112&vquality=normal
-        
-        [self.starDownLoad setTitle:@"暂停" forState:0];
-        [[DownLoadManager Shared] startDownLoad:[NSURL URLWithString:@"https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=1aca17a610d74a7dbaca6e97da87829b&line=0&app_id=1112&vquality=normal"] withProgress:^(Float32 progress) {
-            
-            
-            NSLog(@"---%f",progress);
-            
-        } withCompletion:^(NSString *templePath) {
-            
-            NSLog(@"---%@",templePath);
-        }];
-    }
-    
-//    self.starDownLoad.selected = !self.starDownLoad.selected;
-  
-}
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return _pathArra.count;
-    
-}
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    DownLoadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    if (!cell) {
-        cell = [[DownLoadCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    }
-
-    cell.delegate = self;
-    
-    cell.selectionStyle = 0;
-    
-    return cell;
-    
-}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 70;

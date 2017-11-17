@@ -85,7 +85,6 @@
         self.resumeData = nil;
 
     }
-    
     [_progressBlockDict setObject:block   forKey:self.task ];
     [_completionBlockDict setObject:success forKey:self.task ];
     [_downlaodTaskDict setObject:self.task  forKey:url];

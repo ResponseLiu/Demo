@@ -9,6 +9,7 @@
 #import "BannerScrollViewController.h"
 #import "BSYScrollView.h"
 #import "NotificationScrollView.h"
+#import "SDScrollView.h"
 @interface BannerScrollViewController ()
 
 @end
@@ -31,7 +32,13 @@
         
     };
     
-    NotificationScrollView *scroll1 = [[NotificationScrollView alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 200)];
+    SDScrollView *scrollAnother = [[SDScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(scroll.frame), self.view.frame.size.width, 150)];
+    
+    scrollAnother.dataArra = @[@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg"];
+    
+    [self.view addSubview:scrollAnother];
+    
+    NotificationScrollView *scroll1 = [[NotificationScrollView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-200, self.view.frame.size.width, 200)];
     scroll1.imageArra=@[@"1.jpg",@"2.jpg"];
     
     [self.view addSubview:scroll1];

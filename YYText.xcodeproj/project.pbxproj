@@ -23,6 +23,9 @@
 		6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAA1F3C49C8007F04E2 /* ViewController1.m */; };
 		6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAD1F3C4A13007F04E2 /* MainViewController.m */; };
 		6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCB11F3C4D30007F04E2 /* LayerViewController.m */; };
+		6366FF5C1FBECFA800B2F2D7 /* SDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF5B1FBECFA800B2F2D7 /* SDScrollView.m */; };
+		6366FF5F1FBED04600B2F2D7 /* XLFlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF5E1FBED04600B2F2D7 /* XLFlayout.m */; };
+		6366FF621FBEDAC500B2F2D7 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF611FBEDAC500B2F2D7 /* CollectionViewCell.m */; };
 		636701D41F7CCDA70047E798 /* MovieParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636701D31F7CCDA70047E798 /* MovieParseViewController.m */; };
 		636701DB1F7CD7CA0047E798 /* FMLPlayLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636701DA1F7CD7C90047E798 /* FMLPlayLayerView.m */; };
 		636701DE1F7CE1FF0047E798 /* Test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 636701DD1F7CDC380047E798 /* Test.mp4 */; };
@@ -111,6 +114,12 @@
 		6348CCAD1F3C4A13007F04E2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6348CCB01F3C4D30007F04E2 /* LayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
 		6348CCB11F3C4D30007F04E2 /* LayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerViewController.m; sourceTree = "<group>"; };
+		6366FF5A1FBECFA800B2F2D7 /* SDScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDScrollView.h; sourceTree = "<group>"; };
+		6366FF5B1FBECFA800B2F2D7 /* SDScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDScrollView.m; sourceTree = "<group>"; };
+		6366FF5D1FBED04600B2F2D7 /* XLFlayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLFlayout.h; sourceTree = "<group>"; };
+		6366FF5E1FBED04600B2F2D7 /* XLFlayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLFlayout.m; sourceTree = "<group>"; };
+		6366FF601FBEDAC500B2F2D7 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		6366FF611FBEDAC500B2F2D7 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		636701D21F7CCDA70047E798 /* MovieParseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieParseViewController.h; sourceTree = "<group>"; };
 		636701D31F7CCDA70047E798 /* MovieParseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieParseViewController.m; sourceTree = "<group>"; };
 		636701D91F7CD7C80047E798 /* FMLPlayLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLPlayLayerView.h; sourceTree = "<group>"; };
@@ -471,6 +480,12 @@
 				63C84A491F9B39E4006F3603 /* BSYScrollView.m */,
 				6330FB881FA1BE4200DF4FFC /* NotificationScrollView.h */,
 				6330FB891FA1BE4200DF4FFC /* NotificationScrollView.m */,
+				6366FF5A1FBECFA800B2F2D7 /* SDScrollView.h */,
+				6366FF5B1FBECFA800B2F2D7 /* SDScrollView.m */,
+				6366FF5D1FBED04600B2F2D7 /* XLFlayout.h */,
+				6366FF5E1FBED04600B2F2D7 /* XLFlayout.m */,
+				6366FF601FBEDAC500B2F2D7 /* CollectionViewCell.h */,
+				6366FF611FBEDAC500B2F2D7 /* CollectionViewCell.m */,
 			);
 			name = "无限轮播图";
 			sourceTree = "<group>";
@@ -553,7 +568,7 @@
 				TargetAttributes = {
 					636E57381F3AA8000018825A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = JCN9UV5TZ7;
+						DevelopmentTeam = 44YPYV7JW4;
 						ProvisioningStyle = Automatic;
 					};
 					636E57511F3AA8010018825A = {
@@ -689,10 +704,12 @@
 				63C84A471F9B3956006F3603 /* BannerScrollViewController.m in Sources */,
 				63BAED421F6CFA8E00C3BBB5 /* FMDBManager.m in Sources */,
 				6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */,
+				6366FF621FBEDAC500B2F2D7 /* CollectionViewCell.m in Sources */,
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
 				639249CD1F6912FE0026019A /* MoreImageView.m in Sources */,
 				63EB8DAC1FB6B979008E1FB1 /* DownLoadCell.m in Sources */,
 				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
+				6366FF5C1FBECFA800B2F2D7 /* SDScrollView.m in Sources */,
 				6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */,
 				636701D41F7CCDA70047E798 /* MovieParseViewController.m in Sources */,
 				6330FB8A1FA1BE4200DF4FFC /* NotificationScrollView.m in Sources */,
@@ -721,6 +738,7 @@
 				63940C571F611E1E008FA225 /* NewsDetailViewController.m in Sources */,
 				63ADF1071F91E83B00F0A7E0 /* DownLoadViewController.m in Sources */,
 				6399E6F21F6397AB00DF8EF9 /* WeChatFrindCircle.m in Sources */,
+				6366FF5F1FBED04600B2F2D7 /* XLFlayout.m in Sources */,
 				63ADF10A1F91EDA500F0A7E0 /* DownLoadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,10 +889,10 @@
 			baseConfigurationReference = 973D63001DD7126D1F897000 /* Pods-YYText.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JCN9UV5TZ7;
+				DEVELOPMENT_TEAM = 44YPYV7JW4;
 				INFOPLIST_FILE = YYText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.jft365.yunfengchao.YYText;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.jft365.yunfengchao.YYText11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -884,10 +902,10 @@
 			baseConfigurationReference = 30A6791D1503951D0FDA45CA /* Pods-YYText.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JCN9UV5TZ7;
+				DEVELOPMENT_TEAM = 44YPYV7JW4;
 				INFOPLIST_FILE = YYText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.jft365.yunfengchao.YYText;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.jft365.yunfengchao.YYText11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
