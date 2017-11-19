@@ -54,9 +54,7 @@
 }
 -(void)dealloc{
     
-
     [[NSNotificationCenter defaultCenter]removeObserver:self];
-    
 }
 -(void)complete:(NSNotification *)user{
     
