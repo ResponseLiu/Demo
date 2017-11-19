@@ -19,6 +19,8 @@
 
 @property(nonatomic,strong)UIImageView *HeaderImage;
 
+@property(nonatomic,strong)UILabel *speed;
+
 @property(nonatomic,strong)UIProgressView *progress;
 
 @property(nonatomic,strong)UIButton *starDownLoad;

@@ -22,6 +22,7 @@
         [self addSubview:self.HeaderImage];
         [self addSubview:self.progress];
         [self addSubview:self.starDownLoad];
+//        [self addSubview:self.speed];
         
     }
     
@@ -53,13 +54,25 @@
     if (!_starDownLoad) {
         
         _starDownLoad = [UIButton buttonWithType:0];
-        _starDownLoad.frame = CGRectMake(self.frame.size.width-40, 10, 100, 50);
+        _starDownLoad.frame = CGRectMake(self.frame.size.width-40, 5, 100, 50);
         [_starDownLoad setTitle:@"开始下载" forState:0];
         [_starDownLoad setTitleColor:[UIColor blackColor] forState:0];
         [_starDownLoad addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _starDownLoad;
+}
+-(UILabel *)speed{
+    
+    if (!_speed) {
+        
+        _speed = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width-40, CGRectGetMaxY(self.progress.frame)+15, 50, 15)];
+        _speed.font = [UIFont systemFontOfSize:16];
+        _speed.textAlignment = 2;
+        _speed.textColor = [UIColor blackColor];
+        _speed.text = @"222";
+    }
+    return _speed;
 }
 -(void)download:(UIButton *)button{
     

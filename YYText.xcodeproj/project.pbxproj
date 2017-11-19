@@ -23,6 +23,7 @@
 		6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAA1F3C49C8007F04E2 /* ViewController1.m */; };
 		6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAD1F3C4A13007F04E2 /* MainViewController.m */; };
 		6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCB11F3C4D30007F04E2 /* LayerViewController.m */; };
+		6354336B1FC0444A00F711CB /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6354336A1FC0444A00F711CB /* NewViewController.m */; };
 		6366FF5C1FBECFA800B2F2D7 /* SDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF5B1FBECFA800B2F2D7 /* SDScrollView.m */; };
 		6366FF5F1FBED04600B2F2D7 /* XLFlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF5E1FBED04600B2F2D7 /* XLFlayout.m */; };
 		6366FF621FBEDAC500B2F2D7 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF611FBEDAC500B2F2D7 /* CollectionViewCell.m */; };
@@ -114,6 +115,8 @@
 		6348CCAD1F3C4A13007F04E2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6348CCB01F3C4D30007F04E2 /* LayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
 		6348CCB11F3C4D30007F04E2 /* LayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerViewController.m; sourceTree = "<group>"; };
+		635433691FC0444A00F711CB /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		6354336A1FC0444A00F711CB /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		6366FF5A1FBECFA800B2F2D7 /* SDScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDScrollView.h; sourceTree = "<group>"; };
 		6366FF5B1FBECFA800B2F2D7 /* SDScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDScrollView.m; sourceTree = "<group>"; };
 		6366FF5D1FBED04600B2F2D7 /* XLFlayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLFlayout.h; sourceTree = "<group>"; };
@@ -451,6 +454,8 @@
 				63EB8DAB1FB6B979008E1FB1 /* DownLoadCell.m */,
 				63ADF1081F91EDA400F0A7E0 /* DownLoadManager.h */,
 				63ADF1091F91EDA500F0A7E0 /* DownLoadManager.m */,
+				635433691FC0444A00F711CB /* NewViewController.h */,
+				6354336A1FC0444A00F711CB /* NewViewController.m */,
 			);
 			name = "视频下载";
 			sourceTree = "<group>";
@@ -570,6 +575,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 44YPYV7JW4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					636E57511F3AA8010018825A = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -720,6 +730,7 @@
 				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				63F452941F7CE9D1000ABA34 /* FMLScaledImageViewCell.m in Sources */,
 				633DC98C1F723D3F0029CC98 /* ViewController3.m in Sources */,
+				6354336B1FC0444A00F711CB /* NewViewController.m in Sources */,
 				639249C61F6906AC0026019A /* WeChatCell.m in Sources */,
 				63F452901F7CE857000ABA34 /* FMLClipView.m in Sources */,
 				636E57411F3AA8000018825A /* AppDelegate.m in Sources */,

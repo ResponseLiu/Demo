@@ -19,6 +19,9 @@
     /// 下载任务缓存池
     NSMutableDictionary *_downlaodTaskDict;
     
+    /// 下载状态池
+    NSMutableDictionary *_downLoadState;
+    
     
 }
 @property(nonatomic,strong)NSURLSessionDownloadTask *task;
@@ -40,10 +43,9 @@
         if (mananger == nil) {
             
             mananger = [[DownLoadManager alloc]init];
-            
-            
         }
     }
+    
     return mananger;
     
 }
@@ -68,16 +70,17 @@
     }
     return NO;
 }
--(void)startDownLoad:(NSURL *)url withProgress:(void(^)(Float32 progress))block withCompletion:(void(^)(NSString *templePath))success {
+
+-(void)startDownLoad:(NSURL *)url with:(NSInteger)identifier withProgress:(void(^)(Float32,int64_t,NSURLSessionDownloadTask *task))block withCompletion:(void(^)(NSString *templePath,NSURLSessionDownloadTask *task))success {
 
     if (self.resumeData==nil) {
-
+        
         self.task = [self.session downloadTaskWithURL:url];
-
         [self.task resume];
+        [self.task setValue:@(identifier) forKey:@"taskIdentifier"];
 
     }else{
-
+        
         self.task = [self.session downloadTaskWithResumeData:self.resumeData];
 
         [self.task resume];
@@ -85,6 +88,7 @@
         self.resumeData = nil;
 
     }
+    
     [_progressBlockDict setObject:block   forKey:self.task ];
     [_completionBlockDict setObject:success forKey:self.task ];
     [_downlaodTaskDict setObject:self.task  forKey:url];
@@ -94,7 +98,7 @@
     
     if (_session == nil) {
         
-        NSURLSessionConfiguration * Configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSessionConfiguration * Configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"download"];
         
         _session = [NSURLSession sessionWithConfiguration:Configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
         
@@ -104,22 +108,28 @@
 }
 - (void)URLSession:(nonnull NSURLSession *)session downloadTask:(nonnull NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(nonnull NSURL *)location {
     
-     NSString *URLString = downloadTask.currentRequest.URL.absoluteString;
-     void(^completionBlock)(NSString *templePath) = [_completionBlockDict objectForKey:downloadTask];
-     completionBlock(location.path);
     
-    [_progressBlockDict removeObjectForKey:downloadTask];
-    [_completionBlockDict removeObjectForKey:downloadTask];
-    [_downlaodTaskDict removeObjectForKey:URLString];
-    
+    void(^completionBlock)(NSString *templePath,NSURLSessionDownloadTask *task) = [_completionBlockDict objectForKey:downloadTask];
+     completionBlock(location.path,downloadTask);
 }
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
       didWriteData:(int64_t)bytesWritten
  totalBytesWritten:(int64_t)totalBytesWritten
  totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite{
     
-    void (^block)(Float32 progress) = [_progressBlockDict objectForKey:downloadTask];
+    NSLog(@"%lu",(unsigned long)downloadTask.taskIdentifier);
+    void (^block)(Float32,int64_t,NSURLSessionDownloadTask *task) = [_progressBlockDict objectForKey:downloadTask];
+    block((float)totalBytesWritten/totalBytesExpectedToWrite,(int64_t)bytesWritten,downloadTask);
+}
+- (void)URLSession:(NSURLSession *)session
+              task:(NSURLSessionTask *)task
+didCompleteWithError:(NSError *)error{
     
-    block((float)totalBytesWritten/totalBytesExpectedToWrite);
+    
+    NSString *URLString = task.currentRequest.URL.absoluteString;
+    [_progressBlockDict removeObjectForKey:task];
+    [_completionBlockDict removeObjectForKey:task];
+    [_downlaodTaskDict removeObjectForKey:[NSURL URLWithString:URLString]];
+
 }
 @end

@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-
+typedef NS_ENUM(NSUInteger,DownLoadType){
+    DownLoadBegin = 0,
+    DownLoading,
+    DownLoadEnd
+};
 @interface DownLoadManager : NSObject
 
-
+@property(nonatomic,assign)DownLoadType type;
 
 +(instancetype)Shared;
 
--(void)startDownLoad:(NSURL *)url withProgress:(void(^)(Float32 progress))block withCompletion:(void(^)(NSString * templePath))success;
+-(void)startDownLoad:(NSURL *)url with:(NSInteger)identifier withProgress:(void(^)(Float32,int64_t,NSURLSessionDownloadTask *task))block withCompletion:(void(^)(NSString * templePath,NSURLSessionDownloadTask *task))success;
 
 -(BOOL)checkisDownLoad:(NSString *)path;
 
