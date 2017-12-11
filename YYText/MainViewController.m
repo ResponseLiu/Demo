@@ -36,8 +36,7 @@ __weak NSString *string_weak_ = nil;
     NSLog(@"-%@",obj2);
     
     [self performSelectorInBackground:@selector(connectToServer) withObject:nil];
-        
-     NSLog(@"string3: %@", string_weak_);
+    
 //    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_TARGET_QUEUE_DEFAULT);
 //    
 //    dispatch_async(queue, ^{
