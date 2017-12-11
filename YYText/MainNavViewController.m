@@ -17,8 +17,6 @@
     
     [super viewWillAppear:YES];
     
-    
-    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

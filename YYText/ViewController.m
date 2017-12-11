@@ -11,11 +11,22 @@
 #import "YYTextManager.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) CABasicAnimation *translate;
+@property(nonatomic,strong)CAGradientLayer *gradientLayer;
+@property (assign, nonatomic) CATransform3D startT, endT;
 @end
 
 @implementation ViewController
-
+- (CABasicAnimation *)translate {
+    if (_translate == nil) {
+        _translate = [CABasicAnimation animationWithKeyPath:@"transform"];
+        _translate.duration = 2;
+        _translate.repeatCount = MAXFLOAT;
+        //        _translate.autoreverses = self.shimmerType == ST_AutoReverse ? true : false;
+    }
+    
+    return _translate;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (@available(iOS 11.0, *)) {
@@ -27,25 +38,25 @@
     CGSize size = CGSizeMake(self.view.frame.size.width-20, CGFLOAT_MAX);
     YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:size text: [[YYTextManager SharedManager]regionAt_manager]];
     NSLog(@"---%f",layout.textBoundingSize.height);
-    YYLabel *label = [YYLabel new];
-    label.highlightTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
+    YYLabel *label2 = [YYLabel new];
+    label2.highlightTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
         NSString *click = [text.string substringWithRange:range];
         NSLog(@"---%@",click);
         YYTextHighlight *height = [text yy_attribute:YYTextHighlightAttributeName atIndex:range.location];
         
         
     };
-    label.frame = CGRectMake(10, 64, self.view.frame.size.width-20, layout.textBoundingSize.height);
-    label.textVerticalAlignment = YYTextVerticalAlignmentCenter;
-    label.numberOfLines = 0;
-    label.backgroundColor = [UIColor whiteColor];
-    label.attributedText = [[YYTextManager SharedManager]regionAt_manager];
-    label.textLayout = layout;
-    [self.view addSubview:label];
+    label2.frame = CGRectMake(10, 64, self.view.frame.size.width-20, layout.textBoundingSize.height);
+    label2.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+    label2.numberOfLines = 0;
+    label2.backgroundColor = [UIColor whiteColor];
+    label2.attributedText = [[YYTextManager SharedManager]regionAt_manager];
+    label2.textLayout = layout;
+    [self.view addSubview:label2];
     
     
     YYLabel *label1 = [YYLabel new];
-    label1.frame = CGRectMake(10, CGRectGetMaxY(label.frame), self.view.frame.size.width-20, 100);
+    label1.frame = CGRectMake(10, CGRectGetMaxY(label2.frame), self.view.frame.size.width-20, 100);
     label1.textVerticalAlignment = YYTextVerticalAlignmentCenter;
     label1.numberOfLines = 0;
     label1.backgroundColor = [UIColor whiteColor];
@@ -55,8 +66,16 @@
     
     
 
+    
+    
+    
+    
+    
+
     // Do any additional setup after loading the view, typically from a nib.
 }
+// 随机颜色方法
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

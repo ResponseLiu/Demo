@@ -77,7 +77,7 @@
     
     __weak typeof(view) weakself = view;
     __weak typeof(self) myself = self;
-
+    
     view.moveStatusBlock = ^{
       
         [weakself stopAnimation];

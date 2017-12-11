@@ -58,6 +58,8 @@ __weak NSString *string_weak_ = nil;
 //        NSLog(@"------3");
 //        
 //    });
+    
+   
     self.view.backgroundColor = [UIColor whiteColor];
     self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle",@"FMDBViewController",@"ViewController3",@"MovieParseViewController",@"DownLoadViewController",@"BannerScrollViewController"];
     self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈",@"FMDB多线程执行",@"转场动画",@"视频裁剪",@"大文件下载",@"无限轮播"];
@@ -97,9 +99,7 @@ __weak NSString *string_weak_ = nil;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     Class class = NSClassFromString(self.array[indexPath.row]);
-   
-    
-    
+
     [self.navigationController pushViewController:[[class alloc]init]    animated:YES];
 
 }
