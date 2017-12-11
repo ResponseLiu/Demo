@@ -1,5 +1,6 @@
 window.onload = function(){
 
+
     var imageArray = document.getElementsByTagName("img");
     for(var i=0; i < imageArray.length; i++)
     {

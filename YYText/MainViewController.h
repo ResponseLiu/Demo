@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainViewController : UIViewController
+#import "MainNavViewController.h"
+@interface MainViewController : MainNavViewController
 
 @end

@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = false;
+    } else {
+        // Fallback on earlier versions
+    }
     self.view.backgroundColor = [UIColor blueColor];
     
 //   UIWebView * webView = [[UIWebView alloc] initWithFrame:self.view.frame];

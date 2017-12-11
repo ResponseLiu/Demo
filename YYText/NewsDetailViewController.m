@@ -25,18 +25,15 @@
     [self initProgerss];
     [self requestData];
     [self initWKwebView];
+    
     // Do any additional setup after loading the view.
 }
 -(void)initWKwebView{
  
     
     WKWebViewConfiguration *configur = [[WKWebViewConfiguration alloc] init];
-    
-    //设置configur对象的preferences属性的信息
     WKPreferences *preferences = [[WKPreferences alloc] init];
     configur.preferences = preferences;
-    
-    //是否允许与js进行交互，默认是YES的，如果设置为NO，js的代码就不起作用了
     preferences.javaScriptEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -52,20 +49,16 @@
     webview.navigationDelegate = self;
     [webview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     [self.view addSubview:webview];
-//     [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
-    self.wkWebView= webview;
-
+     self.wkWebView= webview;
 }
 -(void)initProgerss{
-
 
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 1)];
     progressView.progress = 0.0;
     progressView.progressTintColor = [UIColor yellowColor];
-    
     [self.view addSubview:progressView];
     self.progressView = progressView;
-
+    
 }
 -(void)requestData{
 
@@ -96,10 +89,7 @@
 }
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler
 {
-    
-    
     completionHandler();
-    
 }
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
 
@@ -111,7 +101,6 @@
      NSString *body = self.htmlDic[@"body"];
      
      NSString *title = self.htmlDic[@"title"];
-     
      
      NSDictionary *videoDict = self.htmlDic[@"video"][0];
      NSString *videoUrl = videoDict[@"mp4_url"];
@@ -161,7 +150,6 @@
          body = [body stringByReplacingOccurrencesOfString:imageRef withString:imageHtml];
      
      }
-     
      NSURL *cssPath = [[NSBundle mainBundle] URLForResource:@"newDetail" withExtension:@"css"];
      NSURL *jsPath = [[NSBundle mainBundle] URLForResource:@"newDetail" withExtension:@"js"];
      
@@ -204,12 +192,10 @@
     [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:@"openBigPicture"];
     [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:@"openVideoPlayer"];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 
@@ -219,5 +205,16 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+NSString *getSave(NSString *name){
+    
+    
+    return @"444";
+    
+}
+void Save(NSString *name){
+    
+    
+    
+    
+}
 @end
