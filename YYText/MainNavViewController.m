@@ -49,6 +49,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+void RemoveLastConnectionPeripheral_UUID(){
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:@"BluetoothPeripheral_uuid"];
+    [userDefaults synchronize];
+}
+
+ NSString *test(){
+    
+    return @"23232";
+    
+    
+}
+
 /*
 #pragma mark - Navigation
 
@@ -58,5 +71,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

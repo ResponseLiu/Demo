@@ -28,7 +28,35 @@ __weak NSString *string_weak_ = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
+   //二分法查找
+    NSArray *array = @[@1,@4,@10,@20,@25,@30,@40,@50,@55,@60];
+    NSInteger target = 30,min,max,mid;
+    min = 0;
+    max = array.count - 1;
+    mid = (min+max)/2;
+    
+    for (int i = 0; i<array.count; i++) {
+        
+        if([array[i]integerValue] == target) {
+            
+            NSLog(@"--找到了");
+            
+        }else if ([array[i]integerValue]<target){
+            
+            min = mid + 1;
+            mid = (min + max) / 2;
+            
+            
+        }else if ([array[i]integerValue]>target){
+            
+            max = mid - 1;
+            mid = (min + max) / 2;
+            
+        }
+        
+        
+    }
     NSObject *obj1 = nil;
     
     NSObject *obj2 =  [obj1 copy];
