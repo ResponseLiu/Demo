@@ -63,6 +63,9 @@
 		63BAED421F6CFA8E00C3BBB5 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */; };
 		63C0F08F1F5FF16E00BA078B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C0F08E1F5FF16E00BA078B /* 1.png */; };
 		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
+		63C124F92004802E002813DC /* TimeUpdateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C124F62004802E002813DC /* TimeUpdateCell.m */; };
+		63C124FA2004802E002813DC /* TimerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C124F72004802E002813DC /* TimerModel.m */; };
+		63C124FD20048048002813DC /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C124FC20048048002813DC /* UpdateViewController.m */; };
 		63C84A471F9B3956006F3603 /* BannerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C84A461F9B3956006F3603 /* BannerScrollViewController.m */; };
 		63C84A4A1F9B39E4006F3603 /* BSYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C84A491F9B39E4006F3603 /* BSYScrollView.m */; };
 		63EB8DAC1FB6B979008E1FB1 /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EB8DAB1FB6B979008E1FB1 /* DownLoadCell.m */; };
@@ -187,6 +190,12 @@
 		63C0F08E1F5FF16E00BA078B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		63C0F0901F6006CF00BA078B /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		63C0F0911F6006CF00BA078B /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		63C124F52004802E002813DC /* TimeUpdateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUpdateCell.h; sourceTree = "<group>"; };
+		63C124F62004802E002813DC /* TimeUpdateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUpdateCell.m; sourceTree = "<group>"; };
+		63C124F72004802E002813DC /* TimerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerModel.m; sourceTree = "<group>"; };
+		63C124F82004802E002813DC /* TimerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerModel.h; sourceTree = "<group>"; };
+		63C124FB20048048002813DC /* UpdateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		63C124FC20048048002813DC /* UpdateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 		63C84A451F9B3956006F3603 /* BannerScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerScrollViewController.h; sourceTree = "<group>"; };
 		63C84A461F9B3956006F3603 /* BannerScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerScrollViewController.m; sourceTree = "<group>"; };
 		63C84A481F9B39E4006F3603 /* BSYScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSYScrollView.h; sourceTree = "<group>"; };
@@ -354,6 +363,7 @@
 				633DC9891F723D110029CC98 /* New Group1 */,
 				63C84A441F9B3927006F3603 /* 无限轮播图 */,
 				636701D11F7CCCDE0047E798 /* 视频裁剪 */,
+				63C124F420048008002813DC /* 倒计时 */,
 				63ADF1041F91E7E200F0A7E0 /* 视频下载 */,
 				636E57451F3AA8010018825A /* Main.storyboard */,
 				63C0F08E1F5FF16E00BA078B /* 1.png */,
@@ -469,6 +479,19 @@
 				63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */,
 			);
 			name = FMDB;
+			sourceTree = "<group>";
+		};
+		63C124F420048008002813DC /* 倒计时 */ = {
+			isa = PBXGroup;
+			children = (
+				63C124F82004802E002813DC /* TimerModel.h */,
+				63C124F72004802E002813DC /* TimerModel.m */,
+				63C124FB20048048002813DC /* UpdateViewController.h */,
+				63C124FC20048048002813DC /* UpdateViewController.m */,
+				63C124F52004802E002813DC /* TimeUpdateCell.h */,
+				63C124F62004802E002813DC /* TimeUpdateCell.m */,
+			);
+			name = "倒计时";
 			sourceTree = "<group>";
 		};
 		63C84A441F9B3927006F3603 /* 无限轮播图 */ = {
@@ -711,6 +734,7 @@
 			files = (
 				636E57711F3AB0AF0018825A /* YYTextManager.m in Sources */,
 				63783D571F5E76AF004DE51E /* BullViewController.m in Sources */,
+				63C124FD20048048002813DC /* UpdateViewController.m in Sources */,
 				63C84A471F9B3956006F3603 /* BannerScrollViewController.m in Sources */,
 				63BAED421F6CFA8E00C3BBB5 /* FMDBManager.m in Sources */,
 				6399E6EA1F637A3100DF8EF9 /* SearchResultViewController.m in Sources */,
@@ -718,6 +742,7 @@
 				636E57441F3AA8010018825A /* ViewController.m in Sources */,
 				639249CD1F6912FE0026019A /* MoreImageView.m in Sources */,
 				63EB8DAC1FB6B979008E1FB1 /* DownLoadCell.m in Sources */,
+				63C124FA2004802E002813DC /* TimerModel.m in Sources */,
 				63783D5D1F5E7BBF004DE51E /* BulletManager.m in Sources */,
 				6366FF5C1FBECFA800B2F2D7 /* SDScrollView.m in Sources */,
 				6399E6E71F63770B00DF8EF9 /* WeChatSearchViewController.m in Sources */,
@@ -744,6 +769,7 @@
 				63783D5A1F5E7797004DE51E /* BulletView.m in Sources */,
 				639249C31F6905DB0026019A /* WeChatHeader.m in Sources */,
 				639A95DD1F90C81B0000D17B /* MainNavViewController.m in Sources */,
+				63C124F92004802E002813DC /* TimeUpdateCell.m in Sources */,
 				6348CCA61F3C3FD4007F04E2 /* AnimationView.m in Sources */,
 				63830FB91F7E29500025D959 /* MovieFileOutPut.m in Sources */,
 				63940C571F611E1E008FA225 /* NewsDetailViewController.m in Sources */,

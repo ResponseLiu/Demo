@@ -28,6 +28,45 @@ __weak NSString *string_weak_ = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+ 
+    
+//    dispatch_group_t group = dispatch_group_create();
+//
+//    dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_PRIORITY_DEFAULT);
+//    NSMutableArray *array1 = [NSMutableArray array];
+//
+//    for (int i=0; i<10; i++) {
+//
+//        [array1 addObject:[NSNull class]];
+//
+//    }
+//
+//    for (int i=0; i<10; i++) {
+//
+//        dispatch_group_async(group, queue, ^{
+//
+//            dispatch_group_enter(group);
+//            NSLog(@"---%d",i);
+//            [NSThread sleepForTimeInterval:arc4random()%3];
+//
+//            @synchronized (self){
+//
+//                array1[i] = @(i);
+//
+//            }
+//            dispatch_group_leave(group);
+//
+//        });
+//
+//
+//    }
+//
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//
+//        NSLog(@"--111-%@",array1);
+//
+//    });
     
    //二分法查找
     NSArray *array = @[@1,@4,@10,@20,@25,@30,@40,@50,@55,@60];
@@ -88,8 +127,8 @@ __weak NSString *string_weak_ = nil;
     
    
     self.view.backgroundColor = [UIColor whiteColor];
-    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle",@"FMDBViewController",@"ViewController3",@"MovieParseViewController",@"DownLoadViewController",@"BannerScrollViewController"];
-    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈",@"FMDB多线程执行",@"转场动画",@"视频裁剪",@"大文件下载",@"无限轮播"];
+    self.array = @[@"ViewController",@"ViewController1",@"LayerViewController",@"BullViewController",@"NewsDetailViewController",@"WeChatSearchViewController",@"WeChatFrindCircle",@"FMDBViewController",@"ViewController3",@"MovieParseViewController",@"DownLoadViewController",@"BannerScrollViewController",@"UpdateViewController"];
+    self.kind = @[@"图文混排",@"微博动画",@"layer动画",@"视频弹幕",@"新闻详情",@"高仿微信搜索",@"高仿微信朋友圈",@"FMDB多线程执行",@"转场动画",@"视频裁剪",@"大文件下载",@"无限轮播",@"倒计时"];
     [self initTab];
     
     // Do any additional setup after loading the view.
