@@ -29,7 +29,14 @@ __weak NSString *string_weak_ = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
- 
+    
+    NSString *str = @"收货地址:北京东城气温i激动气温你的气温i觉得我基地气温i的绝望i多久我去拿定期我ID为内地我去年底带你去单位i我对你";
+CGSize size =  [str boundingRectWithSize:CGSizeMake(self.view.frame.size.width-50, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
+    NSLog(@"---%f",size.height);
+    
+    
+    
+    
     
 //    dispatch_group_t group = dispatch_group_create();
 //
@@ -87,7 +94,7 @@ __weak NSString *string_weak_ = nil;
             mid = (min + max) / 2;
             
             
-        }else if ([array[i]integerValue]>target){
+        }else if ([array[i] integerValue]>target){
             
             max = mid - 1;
             mid = (min + max) / 2;
