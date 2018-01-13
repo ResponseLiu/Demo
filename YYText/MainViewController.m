@@ -29,12 +29,34 @@ __weak NSString *string_weak_ = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     
-    NSString *str = @"收货地址:北京东城气温i激动气温你的气温i觉得我基地气温i的绝望i多久我去拿定期我ID为内地我去年底带你去单位i我对你";
-CGSize size =  [str boundingRectWithSize:CGSizeMake(self.view.frame.size.width-50, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
-    NSLog(@"---%f",size.height);
+    dispatch_async(queue, ^{
+        NSLog(@"---1");
+    });
+    dispatch_async(queue, ^{
+         NSLog(@"---2");
+    });
+    dispatch_async(queue, ^{
+         NSLog(@"---3");
+    });
     
     
+    dispatch_barrier_async(queue, ^{
+        NSLog(@"---4");
+    });
+      NSLog(@"---5");
+    
+    
+    dispatch_async(queue, ^{
+        NSLog(@"---6");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"---7");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"---8");
+    });
 
 //    dispatch_group_t group = dispatch_group_create();
 //
@@ -84,7 +106,7 @@ CGSize size =  [str boundingRectWithSize:CGSizeMake(self.view.frame.size.width-5
         
         if([array[i]integerValue] == target) {
             
-            NSLog(@"--找到了");
+//            NSLog(@"--找到了");
             
         }else if ([array[i]integerValue]<target){
             
@@ -105,7 +127,7 @@ CGSize size =  [str boundingRectWithSize:CGSizeMake(self.view.frame.size.width-5
     
     NSObject *obj2 =  [obj1 copy];
     
-    NSLog(@"-%@",obj2);
+//    NSLog(@"-%@",obj2);
     
     [self performSelectorInBackground:@selector(connectToServer) withObject:nil];
     
@@ -140,7 +162,7 @@ CGSize size =  [str boundingRectWithSize:CGSizeMake(self.view.frame.size.width-5
 }
 -(void)connectToServer{
 
-    NSLog(@"CONNECT_SEVER");
+//    NSLog(@"CONNECT_SEVER");
 }
 -(void)initTab {
     
