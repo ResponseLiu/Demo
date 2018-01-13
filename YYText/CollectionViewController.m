@@ -103,9 +103,9 @@
         _waterfallLayout = [[XMLayout alloc] init];
         _waterfallLayout.delegate = self;
         _waterfallLayout.column = 2;
-        _waterfallLayout.columnSpace = 5;
-        _waterfallLayout.itemSpace = 5;
-        _waterfallLayout.Inset = UIEdgeInsetsMake(5, 5, 5, 5);
+        _waterfallLayout.columnSpace = 2;
+        _waterfallLayout.itemSpace = 2;
+        _waterfallLayout.Inset = UIEdgeInsetsMake(2, 2, 2, 2);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-64) collectionViewLayout:_waterfallLayout];
         _collectionView.delegate = self;
