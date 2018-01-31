@@ -53,7 +53,6 @@
 -(void)getData:(NSMutableArray *)array with:(NSIndexPath *)indexpath {
     
     
-    
     [self changeTime:array with:indexpath];
     TimerModel *model = self.m_data[indexpath.row];
     self.m_titleLabel.text = model.name;
@@ -74,7 +73,6 @@
     
     
 }
-
 -(void)dealloc {
     
     

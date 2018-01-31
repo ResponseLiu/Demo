@@ -63,14 +63,6 @@
     label1.textParser = [[YYTextManager SharedManager]emotionActPic];
     label1.attributedText = [[YYTextManager SharedManager]emotionAct];
     [self.view addSubview:label1];
-    
-    
-
-    
-    
-    
-    
-    
 
     // Do any additional setup after loading the view, typically from a nib.
 }

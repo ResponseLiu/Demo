@@ -28,35 +28,57 @@ __weak NSString *string_weak_ = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *str = @"ewrewr";
+    
 
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    
-    dispatch_async(queue, ^{
-        NSLog(@"---1");
-    });
-    dispatch_async(queue, ^{
-         NSLog(@"---2");
-    });
-    dispatch_async(queue, ^{
-         NSLog(@"---3");
-    });
-    
-    
-    dispatch_barrier_async(queue, ^{
-        NSLog(@"---4");
-    });
-      NSLog(@"---5");
+    //完全的深拷贝
+//    NSMutableArray *arrayTT = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4", nil];
+//
+//    NSMutableArray *array1 = [NSMutableArray arrayWithObjects:@"A",@"B",@"C",arrayTT, nil];
+//
+//    NSMutableArray *mutable = [array1 mutableCopy];
+//
+//    array1[1] = @"ddddd";
+//
+//    NSMutableArray *array2 = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:mutable] ];
+//
+//    NSLog(@"---%@",array1);
+//
+//
+//    NSLog(@"---2%@",array2);
     
     
-    dispatch_async(queue, ^{
-        NSLog(@"---6");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"---7");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"---8");
-    });
+
+//    void (*action)(id, SEL) = (void (*)(id, SEL)) objc_msgSend;
+//    action(self.target,self.action);
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//
+//    dispatch_async(queue, ^{
+//        NSLog(@"---1");
+//    });
+//    dispatch_async(queue, ^{
+//         NSLog(@"---2");
+//    });
+//    dispatch_async(queue, ^{
+//         NSLog(@"---3");
+//    });
+//
+//
+//    dispatch_barrier_async(queue, ^{
+//        NSLog(@"---4");
+//    });
+//      NSLog(@"---5");
+//
+//
+//    dispatch_async(queue, ^{
+//        NSLog(@"---6");
+//    });
+//    dispatch_async(queue, ^{
+//        NSLog(@"---7");
+//    });
+//    dispatch_async(queue, ^{
+//        NSLog(@"---8");
+//    });
 
 //    dispatch_group_t group = dispatch_group_create();
 //

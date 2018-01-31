@@ -8,7 +8,7 @@
 
 #import "NewsDetailViewController.h"
 #import <WebKit/WebKit.h>
-@interface NewsDetailViewController ()<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
+@interface NewsDetailViewController ()<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler,UIScrollViewDelegate>
 @property(nonatomic,strong)NSDictionary *htmlDic;
 @property (nonatomic, strong) WKWebView *wkWebView;
 @property(nonatomic,strong)UIProgressView*progressView;
@@ -32,6 +32,7 @@
  
     
     WKWebViewConfiguration *configur = [[WKWebViewConfiguration alloc] init];
+   
     WKPreferences *preferences = [[WKPreferences alloc] init];
     configur.preferences = preferences;
     preferences.javaScriptEnabled = YES;
@@ -43,7 +44,7 @@
     configur.userContentController = userContentController;
     WKWebView *webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) configuration:configur];
     webview.scrollView.scrollIndicatorInsets = webview.scrollView.contentInset;
-    
+
     webview.UIDelegate = self;
     webview.backgroundColor = [UIColor redColor];
     webview.navigationDelegate = self;
@@ -51,6 +52,11 @@
     [self.view addSubview:webview];
      self.wkWebView= webview;
 }
+//-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+//
+//    return nil;
+//
+//}
 -(void)initProgerss{
 
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 1)];
@@ -81,10 +87,16 @@
     
     [task resume];
 }
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
 
-     self.progressView.progress = self.wkWebView.estimatedProgress;
-    NSLog(@"-estimatedProgress--%f",self.wkWebView.estimatedProgress);
+    
+    [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+      
+        self.progressView.progress = self.wkWebView.estimatedProgress;
+        NSLog(@"-estimatedProgress--%f",self.wkWebView.estimatedProgress);
+        
+    }];
+    
 
 }
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler
@@ -93,6 +105,7 @@
 }
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
 
+    
     
     
 }
@@ -148,7 +161,7 @@
          }
          
          body = [body stringByReplacingOccurrencesOfString:imageRef withString:imageHtml];
-     
+        
      }
      NSURL *cssPath = [[NSBundle mainBundle] URLForResource:@"newDetail" withExtension:@"css"];
      NSURL *jsPath = [[NSBundle mainBundle] URLForResource:@"newDetail" withExtension:@"js"];

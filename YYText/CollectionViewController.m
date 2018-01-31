@@ -55,7 +55,6 @@
      [self.data addObject:@"http://p1.pstatp.com/large/57650012d4801ec769cf.jpg"];
      [self.data addObject:@"http://p1.pstatp.com/large/4f3b000394ac92f2b4e8.jpg"];
      [self.data addObject:@"http://p3.pstatp.com/live/1080x1080/4d39000141dcd9fe95e5.jpg"];
-    
      [self.data addObject:@"http://p3.pstatp.com/medium/4cd60011a1d9e42205d2.jpg"];
      [self.data addObject:@"http://p3.pstatp.com/live/100x100/551d0005c072a6c7944f.jpg"];
      [self.data addObject:@"http://p3.pstatp.com/live/720x720/551d0005c072a6c7944f.jpg"];
