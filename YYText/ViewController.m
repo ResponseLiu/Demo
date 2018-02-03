@@ -14,6 +14,14 @@
 @property (strong, nonatomic) CABasicAnimation *translate;
 @property(nonatomic,strong)CAGradientLayer *gradientLayer;
 @property (assign, nonatomic) CATransform3D startT, endT;
+
+@property(nonatomic,strong)UIImageView *image;
+
+@property(nonatomic,strong)CAShapeLayer *layer;
+
+@property(nonatomic,strong)CAShapeLayer *masklayer;
+
+@property(nonatomic,strong)UIBezierPath *maskpatch;
 @end
 
 @implementation ViewController
@@ -64,10 +72,42 @@
     label1.attributedText = [[YYTextManager SharedManager]emotionAct];
     [self.view addSubview:label1];
 
+    //刮奖效果
+    
+    _image = [[UIImageView alloc]initWithFrame:self.view.frame];
+
+    _image.image = [UIImage imageNamed:@"1"];
+
+    [self.view addSubview:_image];
+    
+  
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
-// 随机颜色方法
 
+// 随机颜色方法
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    UITouch * touch =  touches.anyObject;
+
+    CGPoint point  =[touch locationInView:self.image];
+
+    CGRect rect =CGRectMake(point.x, point.y, 30, 30);
+
+    UIGraphicsBeginImageContext(self.image.frame.size);
+
+    CGContextRef ref =  UIGraphicsGetCurrentContext();
+    
+    [self.image.layer renderInContext:ref];
+
+    CGContextClearRect(ref, rect);
+
+    UIImage *new = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    self.image.image = new;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

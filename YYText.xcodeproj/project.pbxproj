@@ -25,6 +25,7 @@
 		6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAA1F3C49C8007F04E2 /* ViewController1.m */; };
 		6348CCAE1F3C4A13007F04E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCAD1F3C4A13007F04E2 /* MainViewController.m */; };
 		6348CCB21F3C4D30007F04E2 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348CCB11F3C4D30007F04E2 /* LayerViewController.m */; };
+		6352475C20247F2300DFE43A /* 屏幕快照 2018-02-02 下午7.11.49.png in Resources */ = {isa = PBXBuildFile; fileRef = 6352475B20247F2300DFE43A /* 屏幕快照 2018-02-02 下午7.11.49.png */; };
 		6354336B1FC0444A00F711CB /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6354336A1FC0444A00F711CB /* NewViewController.m */; };
 		6366FF5C1FBECFA800B2F2D7 /* SDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF5B1FBECFA800B2F2D7 /* SDScrollView.m */; };
 		6366FF5F1FBED04600B2F2D7 /* XLFlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366FF5E1FBED04600B2F2D7 /* XLFlayout.m */; };
@@ -125,6 +126,7 @@
 		6348CCAD1F3C4A13007F04E2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6348CCB01F3C4D30007F04E2 /* LayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
 		6348CCB11F3C4D30007F04E2 /* LayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerViewController.m; sourceTree = "<group>"; };
+		6352475B20247F2300DFE43A /* 屏幕快照 2018-02-02 下午7.11.49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-02-02 下午7.11.49.png"; sourceTree = "<group>"; };
 		635433691FC0444A00F711CB /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		6354336A1FC0444A00F711CB /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		6366FF5A1FBECFA800B2F2D7 /* SDScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDScrollView.h; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		6348CCA71F3C498D007F04E2 /* 图文混排 */ = {
 			isa = PBXGroup;
 			children = (
+				6352475B20247F2300DFE43A /* 屏幕快照 2018-02-02 下午7.11.49.png */,
 				636E57421F3AA8000018825A /* ViewController.h */,
 				636E57431F3AA8010018825A /* ViewController.m */,
 				636E576F1F3AB0AF0018825A /* YYTextManager.h */,
@@ -676,6 +679,7 @@
 				63C0F08F1F5FF16E00BA078B /* 1.png in Resources */,
 				636E57811F3AF6240018825A /* EmoticonQQ.bundle in Resources */,
 				6399E6EE1F63972600DF8EF9 /* 语音.png in Resources */,
+				6352475C20247F2300DFE43A /* 屏幕快照 2018-02-02 下午7.11.49.png in Resources */,
 				636E57491F3AA8010018825A /* Assets.xcassets in Resources */,
 				63940C5F1F61469D008FA225 /* newDetail.js in Resources */,
 				636E57471F3AA8010018825A /* Main.storyboard in Resources */,
