@@ -63,7 +63,6 @@
 		639A95DD1F90C81B0000D17B /* MainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A95DC1F90C81B0000D17B /* MainNavViewController.m */; };
 		63ADF1071F91E83B00F0A7E0 /* DownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADF1061F91E83B00F0A7E0 /* DownLoadViewController.m */; };
 		63ADF10A1F91EDA500F0A7E0 /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADF1091F91EDA500F0A7E0 /* DownLoadManager.m */; };
-		63BAED3F1F6CFA4100C3BBB5 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAED3E1F6CFA4100C3BBB5 /* FMDBViewController.m */; };
 		63BAED421F6CFA8E00C3BBB5 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */; };
 		63C0F08F1F5FF16E00BA078B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C0F08E1F5FF16E00BA078B /* 1.png */; };
 		63C0F0921F6006CF00BA078B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F0911F6006CF00BA078B /* NSString+Category.m */; };
@@ -194,8 +193,6 @@
 		63ADF1061F91E83B00F0A7E0 /* DownLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadViewController.m; sourceTree = "<group>"; };
 		63ADF1081F91EDA400F0A7E0 /* DownLoadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
 		63ADF1091F91EDA500F0A7E0 /* DownLoadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
-		63BAED3D1F6CFA4100C3BBB5 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
-		63BAED3E1F6CFA4100C3BBB5 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
 		63BAED401F6CFA8E00C3BBB5 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
 		63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		63C0F08E1F5FF16E00BA078B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -499,8 +496,6 @@
 		63BAED3C1F6CFA1700C3BBB5 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				63BAED3D1F6CFA4100C3BBB5 /* FMDBViewController.h */,
-				63BAED3E1F6CFA4100C3BBB5 /* FMDBViewController.m */,
 				63BAED401F6CFA8E00C3BBB5 /* FMDBManager.h */,
 				63BAED411F6CFA8E00C3BBB5 /* FMDBManager.m */,
 			);
@@ -779,7 +774,6 @@
 				63C84A4A1F9B39E4006F3603 /* BSYScrollView.m in Sources */,
 				63F4529A1F7CECE2000ABA34 /* UIImage+FMLClipRect.m in Sources */,
 				633DC98F1F723D490029CC98 /* ViewController4.m in Sources */,
-				63BAED3F1F6CFA4100C3BBB5 /* FMDBViewController.m in Sources */,
 				6348CCAB1F3C49C8007F04E2 /* ViewController1.m in Sources */,
 				6300EC732008D11F005C9EA6 /* XMLayout.m in Sources */,
 				63F452941F7CE9D1000ABA34 /* FMLScaledImageViewCell.m in Sources */,
