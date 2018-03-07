@@ -35,7 +35,6 @@ static FMDatabaseQueue *_QUEUE;
 
     if (directory.length==0||dbFile.length==0) {
         
-        
         return;
     }
     NSFileManager *manager = [NSFileManager defaultManager];

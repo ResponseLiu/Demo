@@ -121,13 +121,11 @@
     CGFloat mostHeight = [self.columnHeight[mostColumn] floatValue];
     return CGSizeMake(self.collectionView.bounds.size.width, mostHeight+_Inset.top+_Inset.bottom);
 }
-
 - (NSInteger)columnOfMostHeight
 {
     if(self.columnHeight.count == 0 || self.columnHeight.count == 1){
         return 0;
     }
-    
     __block NSInteger mostIndex = 0;
     [self.columnHeight enumerateObjectsUsingBlock:^(NSNumber *number, NSUInteger idx, BOOL *stop) {
         

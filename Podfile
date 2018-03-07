@@ -4,4 +4,5 @@ pod 'YYText'
 pod 'YYImage’
 pod ‘FMDB’
 pod ‘SDWebImage’
+pod 'LazyScroll'
 end

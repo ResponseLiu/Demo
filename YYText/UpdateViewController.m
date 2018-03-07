@@ -75,11 +75,10 @@
         [model update];
         
     }
-    
+
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         
         [[NSNotificationCenter defaultCenter]postNotificationName:@"update" object:nil];
-        
     }];
     
     

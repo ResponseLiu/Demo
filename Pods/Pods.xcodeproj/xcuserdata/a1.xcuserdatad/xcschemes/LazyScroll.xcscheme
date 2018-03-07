@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '87803DF4E1A403F88484C01EC4365200'
-               BlueprintName = 'Pods-YYText'
+               BlueprintIdentifier = 'F5954A7AC2C86CC0827E941E29AE59A8'
+               BlueprintName = 'LazyScroll'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-YYText.a'>
+               BuildableName = 'libLazyScroll.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
